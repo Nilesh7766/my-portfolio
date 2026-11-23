@@ -1,486 +1,2926 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="dark">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Nilesh More | .NET Full Stack Developer</title>
-<meta name="description" content="Nilesh More: .NET Full Stack Developer with 4 years of experience in ASP.NET, MVC, .NET Core, C# and SQL Server.">
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-<style>
-:root{--bg:#f0f7ff;--s:#fff;--tx:#0f2238;--mu:#4f6580;--bd:rgba(37,99,235,.15);--a:#2563eb;--b:#06b6d4;--c:#22c55e;--d:#facc15;--g:linear-gradient(120deg,#2563eb,#06b6d4 55%,#22c55e);--g2:linear-gradient(120deg,#22c55e,#06b6d4);--sh:0 12px 40px rgba(37,99,235,.13)}
-[data-theme=dark]{--bg:#05070d;--s:#0e121c;--tx:#eef3ff;--mu:#9aa8c4;--bd:rgba(120,160,255,.14);--sh:0 12px 40px rgba(0,0,0,.6)}
-[data-theme=dark] .aur{background:radial-gradient(600px 400px at 8% 5%,rgba(37,99,235,.16),transparent),radial-gradient(500px 400px at 95% 20%,rgba(6,182,212,.12),transparent),radial-gradient(600px 500px at 60% 100%,rgba(34,197,94,.10),transparent)}
-*{box-sizing:border-box;margin:0;padding:0;min-width:0}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--bg);color:var(--tx);line-height:1.65;font-size:clamp(14.5px,.4vw + 13px,16.5px);overflow-x:hidden;transition:background .3s}
-img{max-width:100%;display:block}a{color:inherit}
-.aur{position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(600px 400px at 8% 5%,rgba(37,99,235,.25),transparent),radial-gradient(500px 400px at 95% 20%,rgba(6,182,212,.2),transparent),radial-gradient(600px 500px at 60% 100%,rgba(34,197,94,.18),transparent)}
-.w{max-width:1200px;margin:auto;padding:0 clamp(16px,4vw,32px)}section{padding:clamp(56px,9vw,20px) 0;scroll-margin-top:70px}
-.g{background:var(--g);-webkit-background-clip:text;background-clip:text;color:transparent}
-header{position:fixed;top:12px;left:0;right:0;z-index:100;padding:0 clamp(10px,3vw,24px)}
-.nb{max-width:1100px;margin:auto;display:flex;align-items:center;gap:8px;padding:8px 8px 8px 20px;border-radius:60px;background:color-mix(in srgb,var(--s) 80%,transparent);border:1px solid var(--bd);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:var(--sh)}
-.lg{font-weight:800;font-size:20px;letter-spacing:-.5px;text-decoration:none;margin-right:auto}
-.nb nav{display:flex;gap:2px}.nb nav a{text-decoration:none;color:var(--mu);font-size:13.5px;font-weight:600;padding:9px 14px;border-radius:30px;transition:.2s}.nb nav a:hover,.nb nav a.on{background:var(--a);color:#fff}
-.ib{width:42px;height:42px;border-radius:50%;border:1px solid var(--bd);background:var(--s);color:var(--tx);font-size:17px;cursor:pointer;display:grid;place-items:center}
-.mb{display:none}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:48px;padding:12px 26px;border-radius:16px;font-weight:700;font-size:14.5px;text-decoration:none;border:1px solid var(--bd);background:var(--s);color:var(--tx);cursor:pointer;transition:.25s;font-family:inherit}
-.btn.p{background:var(--g);color:#fff;border:0;box-shadow:0 12px 30px rgba(37,99,235,.35)}.btn:hover{transform:translateY(-3px)}
-.hero{min-height:100svh;display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(24px,5vw,60px);align-items:center;padding-top:110px}
-.pill{display:inline-flex;gap:8px;align-items:center;padding:7px 15px;border-radius:30px;background:var(--s);border:1px solid var(--bd);font-size:12.5px;font-weight:700;box-shadow:var(--sh)}.pill i{color:#22c55e;font-size:8px;animation:bl 1.6s infinite}@keyframes bl{50%{opacity:.3}}
-h1{font-size:clamp(38px,7vw,78px);line-height:1.04;font-weight:800;letter-spacing:-.04em;margin:20px 0 12px}
-.ty{font-size:clamp(17px,2.4vw,26px);font-weight:700;min-height:38px}.ty::after{content:"|";color:var(--b);animation:bl 1s infinite}
-.hero p.d{color:var(--mu);max-width:540px;margin:14px 0 28px}
-.row{display:flex;gap:12px;flex-wrap:wrap}.soc{display:flex;gap:10px;margin-top:26px}.soc a{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:var(--s);border:1px solid var(--bd);font-size:19px;transition:.25s}.soc a:hover{background:var(--g);color:#fff;transform:translateY(-4px)}
-.ph{position:relative;display:grid;place-items:center;padding:20px}
-.ph .fr{position:relative;width:min(380px,100%);aspect-ratio:4/5;border-radius:36px;padding:5px;background:var(--g);animation:fl 6s ease-in-out infinite}
-.ph .fr div{width:100%;height:100%;border-radius:32px;background:linear-gradient(160deg,#ddd6ff,#ffd6ea);display:grid;place-items:center;font-size:90px;font-weight:800;color:#fff;overflow:hidden;position:relative}
-.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-@keyframes fl{50%{transform:translateY(-10px)}}
-.cp2{position:absolute;display:flex;gap:10px;align-items:center;padding:10px 14px;border-radius:16px;background:color-mix(in srgb,var(--s) 85%,transparent);backdrop-filter:blur(12px);border:1px solid var(--bd);box-shadow:var(--sh);font-size:12.5px;font-weight:700;line-height:1.3}
-.cp2 i{width:34px;height:34px;border-radius:10px;background:var(--g2);color:#fff;display:grid;place-items:center}.cp2 small{display:block;color:var(--mu);font-weight:500;font-size:11px}
-.k1{top:6%;left:-4%}.k2{bottom:20%;right:-4%}.k3{bottom:2%;left:6%}
-.mq{overflow:hidden;border-block:1px solid var(--bd);background:var(--s);padding:16px 0}.mq div{display:flex;gap:46px;width:max-content;animation:mq 32s linear infinite;font-weight:800;font-size:18px;color:var(--mu)}.mq span{display:flex;gap:10px;align-items:center;white-space:nowrap}.mq i{color:var(--a)}
-@keyframes mq{to{transform:translateX(-50%)}}
-.tt{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--b);margin-bottom:8px}
-h2{font-size:clamp(28px,4.4vw,48px);font-weight:800;letter-spacing:-.03em;line-height:1.1;margin-bottom:12px}.sub{color:var(--mu);max-width:620px;margin-bottom:clamp(24px,4vw,44px)}
-.card{background:var(--s);border:1px solid var(--bd);border-radius:26px;padding:clamp(18px,2.5vw,28px);box-shadow:var(--sh);transition:.3s}.card:hover{transform:translateY(-6px);border-color:var(--a)}
-.bento{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.ab{grid-column:span 2;grid-row:span 2}.ab p{color:var(--mu);margin:10px 0}
-.ic{width:54px;height:54px;border-radius:17px;background:var(--g);display:grid;place-items:center;color:#fff;font-size:25px;margin-bottom:16px;box-shadow:0 10px 24px rgba(37,99,235,.3)}
-.card h3{font-size:19px;margin-bottom:6px;letter-spacing:-.01em}.card p{color:var(--mu);font-size:14.5px}
-.st b{font-size:clamp(38px,5vw,54px);font-weight:800;display:block;line-height:1.1}.st span{color:var(--mu);font-size:13.5px;font-weight:600}
-.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}.tags span{padding:7px 14px;border-radius:30px;font-size:12.5px;font-weight:700;background:color-mix(in srgb,var(--a) 12%,transparent);color:var(--a)}.tags span:nth-child(2n){background:color-mix(in srgb,var(--b) 12%,transparent);color:var(--b)}.tags span:nth-child(3n){background:color-mix(in srgb,var(--c) 15%,transparent);color:#0aa0ae}
-.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.g2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-.sk h3{display:flex;align-items:center;gap:10px;margin-bottom:16px}.sk h3 i{color:var(--a)}
-.sr{margin-bottom:14px}.sr div{display:flex;justify-content:space-between;font-weight:700;font-size:13.5px;margin-bottom:6px}.bar{height:9px;border-radius:9px;background:color-mix(in srgb,var(--a) 12%,transparent);overflow:hidden}.bar i{display:block;height:100%;width:0;border-radius:9px;background:var(--g);transition:width 1.4s cubic-bezier(.2,.8,.2,1)}
-.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}.tabs button{border:1px solid var(--bd);background:var(--s);color:var(--mu);padding:10px 20px;border-radius:30px;font-weight:700;font-size:13.5px;cursor:pointer;font-family:inherit;min-height:44px;transition:.2s}.tabs button.on,.tabs button:hover{background:var(--g);color:#fff;border-color:transparent}
-.hid{display:none!important}
-.pj{padding:0;overflow:hidden}.pj .im{height:clamp(140px,18vw,190px);display:grid;place-items:center;font-size:54px;color:#fffd;position:relative;overflow:hidden}.pj .im::after{content:"";position:absolute;width:160px;height:160px;border-radius:50%;background:#ffffff22;right:-40px;top:-50px}
-.pj .bd{padding:20px 22px 24px}.pj .tg{display:flex;gap:6px;flex-wrap:wrap;margin:12px 0}.pj .tg span{font-size:11.5px;font-weight:700;padding:4px 11px;border-radius:20px;background:color-mix(in srgb,var(--a) 10%,transparent);color:var(--a)}
-.lk{font-weight:800;font-size:13.5px;color:var(--a);text-decoration:none;display:inline-flex;gap:6px;align-items:center}.lk:hover{gap:10px}
-.sv .n{position:absolute;top:18px;right:22px;font-size:46px;font-weight:800;opacity:.08}.sv{position:relative}.sv ul{list-style:none;margin-top:12px}.sv li{font-size:13.5px;color:var(--mu);padding:4px 0}.sv li::before{content:"✓";color:var(--a);font-weight:800;margin-right:8px}
-.stp{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;counter-reset:s}.stp .card{counter-increment:s;padding-top:60px;position:relative}.stp .card::before{content:counter(s,decimal-leading-zero);position:absolute;top:16px;left:22px;font-size:34px;font-weight:800;background:var(--g);-webkit-background-clip:text;background-clip:text;color:transparent}
-.tl{position:relative;padding-left:32px;max-width:820px}.tl::before{content:"";position:absolute;left:8px;top:8px;bottom:8px;width:3px;border-radius:3px;background:var(--g)}.ti{position:relative;margin-bottom:18px}.ti::before{content:"";position:absolute;left:-32px;top:26px;width:19px;height:19px;border-radius:50%;background:var(--bg);border:4px solid var(--b)}.ti small{color:var(--b);font-weight:800;font-size:12px;letter-spacing:.08em}
-.tp{display:none}.tp.on{display:block}
-details{background:var(--s);border:1px solid var(--bd);border-radius:20px;padding:4px 22px;margin-bottom:12px;transition:.2s}details[open]{border-color:var(--a);box-shadow:var(--sh)}summary{cursor:pointer;font-weight:700;padding:16px 0;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:48px}summary::-webkit-details-marker{display:none}summary::after{content:"+";font-size:24px;color:var(--b);transition:.2s}details[open] summary::after{transform:rotate(45deg)}details p{color:var(--mu);padding-bottom:16px}
-.ct{display:grid;grid-template-columns:1.2fr 1fr;gap:20px}form{display:grid;gap:12px}input,textarea{width:100%;padding:15px 18px;border-radius:16px;border:1px solid var(--bd);background:var(--bg);color:var(--tx);font:inherit;font-size:16px;outline:0;transition:.2s}input:focus,textarea:focus{border-color:var(--a);box-shadow:0 0 0 4px color-mix(in srgb,var(--a) 20%,transparent)}
-.cl{display:flex;gap:14px;align-items:center;text-decoration:none;padding:12px 0}.cl .ic{margin:0;flex-shrink:0;width:48px;height:48px;font-size:21px}.cl small{display:block;color:var(--mu);font-size:13px}.cl b{font-size:14.5px}
-.cta{text-align:center;background:var(--g);color:#fff;border:0;position:relative;overflow:hidden}.cta p{color:#ffffffdd;max-width:520px;margin:8px auto 20px}.cta .btn{background:#fff;color:#1d4ed8}
-footer{padding:30px 0;border-top:1px solid var(--bd);text-align:center;color:var(--mu);font-size:13.5px}
-.rv{opacity:0;transform:translateY(28px);transition:opacity .8s,transform .8s}.rv.in{opacity:1;transform:none}
-.top{position:fixed;right:max(18px,env(safe-area-inset-right));bottom:88px;z-index:90;opacity:0;pointer-events:none;transition:.3s}.top.s{opacity:1;pointer-events:auto}
-.bot{position:fixed;right:max(18px,env(safe-area-inset-right));bottom:max(18px,env(safe-area-inset-bottom));z-index:200;width:58px;height:58px;border:0;border-radius:50%;background:var(--g);color:#fff;font-size:25px;box-shadow:0 10px 30px rgba(6,182,212,.45);cursor:pointer;transition:.25s}.bot:hover{transform:scale(1.1) rotate(-8deg)}
-.cw{position:fixed;right:max(18px,env(safe-area-inset-right));bottom:88px;z-index:200;width:min(360px,calc(100vw - 32px));height:min(450px,calc(100dvh - 120px));display:none;flex-direction:column;background:var(--s);border:1px solid var(--bd);border-radius:24px;overflow:hidden;box-shadow:0 24px 60px rgba(40,20,120,.3)}.cw.open{display:flex}
-.cw header{position:static;background:var(--g);color:#fff;padding:15px 18px;font-weight:800}
-.cm{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column}.m{max-width:86%;padding:10px 14px;margin-bottom:9px;border-radius:16px;font-size:13px;line-height:1.55;white-space:pre-wrap;background:color-mix(in srgb,var(--a) 10%,transparent);border-bottom-left-radius:4px}.m.u{background:var(--a);color:#fff;margin-left:auto;border-radius:16px 16px 4px 16px}
-.sg{display:flex;flex-wrap:wrap;gap:6px;padding:0 12px 10px}.sg button{border:1px solid var(--bd);background:var(--bg);color:var(--a);border-radius:20px;padding:6px 12px;font-size:12px;font-weight:700;cursor:pointer;min-height:34px}
-.cf{display:flex;gap:8px;padding:10px;border-top:1px solid var(--bd)}.cf input{padding:10px 14px;border-radius:12px}.cf button{border:0;background:var(--a);color:#fff;border-radius:12px;width:46px;cursor:pointer}
-@media(max-width:1000px){.hero{grid-template-columns:1fr;text-align:center;padding-top:100px;min-height:auto}.hero p.d{margin-inline:auto}.row,.soc{justify-content:center}.ph{order:-1}.ph .fr{width:min(300px,80%)}.bento,.g4{grid-template-columns:1fr 1fr}.g3{grid-template-columns:1fr 1fr}.stp{grid-template-columns:repeat(3,1fr)}.ct{grid-template-columns:1fr}}
-@media(max-width:760px){.nb nav{position:absolute;top:66px;left:0;right:0;flex-direction:column;padding:12px;border-radius:24px;background:var(--s);border:1px solid var(--bd);box-shadow:var(--sh);display:none}.nb nav.open{display:flex}.nb nav a{padding:14px 16px;font-size:15px}.mb{display:grid}.nb .btn{display:none}}
-@media(max-width:600px){.bento,.g4,.g3,.g2,.stp{grid-template-columns:1fr}.ab{grid-column:auto;grid-row:auto}.k1,.k2{display:none}.btn{width:100%}.row .btn{flex:1 1 100%}.bento .st{display:inline-block}.bento{grid-template-columns:1fr 1fr}.ab{grid-column:1/-1}}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
-.ex{list-style:none;margin-top:14px}.ex li{position:relative;padding:6px 0 6px 28px;font-size:14px;color:var(--mu)}
-.ex li::before{content:"\2713";position:absolute;left:0;top:6px;width:20px;height:20px;border-radius:50%;background:var(--g);color:#fff;font-size:11px;font-weight:800;display:grid;place-items:center}
-.co{font-weight:700;color:var(--tx)!important;margin-top:2px}.co i{color:var(--a);margin-right:4px}
-</style>
-</head>
-<body>
-<div class="aur"></div>
-<header><div class="nb"><a class="lg" href="#home">Nilesh More<span class="g">.</span></a>
- <nav id="nv"><a class="on" href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#services">Services</a><a href="#journey">Journey</a><a href="#contact">Contact</a></nav>
- <button class="ib" id="th" aria-label="Switch to original theme" title="Switch to original theme"><i class="bi bi-sun-fill"></i></button><a class="btn p" style="min-height:42px;padding:8px 20px" href="#contact">Hire Me</a><button class="ib mb" id="mn" aria-label="Menu"><i class="bi bi-list"></i></button></div></header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Nilesh More | .NET Full Stack Developer</title>
+    <meta
+      name="description"
+      content="Nilesh More: .NET Full Stack Developer with 4 years of experience in ASP.NET, MVC, .NET Core, C# and SQL Server."
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #f0f7ff;
+        --s: #fff;
+        --tx: #0f2238;
+        --mu: #4f6580;
+        --bd: rgba(37, 99, 235, 0.15);
+        --a: #2563eb;
+        --b: #06b6d4;
+        --c: #22c55e;
+        --d: #facc15;
+        --g: linear-gradient(120deg, #2563eb, #06b6d4 55%, #22c55e);
+        --g2: linear-gradient(120deg, #22c55e, #06b6d4);
+        --sh: 0 12px 40px rgba(37, 99, 235, 0.13);
+      }
+      [data-theme="dark"] {
+        --bg: #05070d;
+        --s: #0e121c;
+        --tx: #eef3ff;
+        --mu: #9aa8c4;
+        --bd: rgba(120, 160, 255, 0.14);
+        --sh: 0 12px 40px rgba(0, 0, 0, 0.6);
+      }
+      [data-theme="dark"] .aur {
+        background:
+          radial-gradient(
+            600px 400px at 8% 5%,
+            rgba(37, 99, 235, 0.16),
+            transparent
+          ),
+          radial-gradient(
+            500px 400px at 95% 20%,
+            rgba(6, 182, 212, 0.12),
+            transparent
+          ),
+          radial-gradient(
+            600px 500px at 60% 100%,
+            rgba(34, 197, 94, 0.1),
+            transparent
+          );
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        min-width: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+        -webkit-text-size-adjust: 100%;
+      }
+      body {
+        font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+        background: var(--bg);
+        color: var(--tx);
+        line-height: 1.65;
+        font-size: clamp(14.5px, 0.4vw + 13px, 16.5px);
+        overflow-x: hidden;
+        transition: background 0.3s;
+      }
+      img {
+        max-width: 100%;
+        display: block;
+      }
+      a {
+        color: inherit;
+      }
+      .aur {
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+        background:
+          radial-gradient(
+            600px 400px at 8% 5%,
+            rgba(37, 99, 235, 0.25),
+            transparent
+          ),
+          radial-gradient(
+            500px 400px at 95% 20%,
+            rgba(6, 182, 212, 0.2),
+            transparent
+          ),
+          radial-gradient(
+            600px 500px at 60% 100%,
+            rgba(34, 197, 94, 0.18),
+            transparent
+          );
+      }
+      .w {
+        max-width: 1200px;
+        margin: auto;
+        padding: 0 clamp(16px, 4vw, 32px);
+      }
+      section {
+        padding: clamp(56px, 9vw, 20px) 0;
+        scroll-margin-top: 70px;
+      }
+      .g {
+        background: var(--g);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      header {
+        position: fixed;
+        top: 12px;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        padding: 0 clamp(10px, 3vw, 24px);
+      }
+      .nb {
+        max-width: 1100px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 8px 8px 20px;
+        border-radius: 60px;
+        background: color-mix(in srgb, var(--s) 80%, transparent);
+        border: 1px solid var(--bd);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+        box-shadow: var(--sh);
+      }
+      .lg {
+        font-weight: 800;
+        font-size: 20px;
+        letter-spacing: -0.5px;
+        text-decoration: none;
+        margin-right: auto;
+      }
+      .nb nav {
+        display: flex;
+        gap: 2px;
+      }
+      .nb nav a {
+        text-decoration: none;
+        color: var(--mu);
+        font-size: 13.5px;
+        font-weight: 600;
+        padding: 9px 14px;
+        border-radius: 30px;
+        transition: 0.2s;
+      }
+      .nb nav a:hover,
+      .nb nav a.on {
+        background: var(--a);
+        color: #fff;
+      }
+      .ib {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        border: 1px solid var(--bd);
+        background: var(--s);
+        color: var(--tx);
+        font-size: 17px;
+        cursor: pointer;
+        display: grid;
+        place-items: center;
+      }
+      .mb {
+        display: none;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 9px;
+        min-height: 48px;
+        padding: 12px 26px;
+        border-radius: 16px;
+        font-weight: 700;
+        font-size: 14.5px;
+        text-decoration: none;
+        border: 1px solid var(--bd);
+        background: var(--s);
+        color: var(--tx);
+        cursor: pointer;
+        transition: 0.25s;
+        font-family: inherit;
+      }
+      .btn.p {
+        background: var(--g);
+        color: #fff;
+        border: 0;
+        box-shadow: 0 12px 30px rgba(37, 99, 235, 0.35);
+      }
+      .btn:hover {
+        transform: translateY(-3px);
+      }
+      .hero {
+        min-height: 100svh;
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: clamp(24px, 5vw, 60px);
+        align-items: center;
+        padding-top: 110px;
+      }
+      .pill {
+        display: inline-flex;
+        gap: 8px;
+        align-items: center;
+        padding: 7px 15px;
+        border-radius: 30px;
+        background: var(--s);
+        border: 1px solid var(--bd);
+        font-size: 12.5px;
+        font-weight: 700;
+        box-shadow: var(--sh);
+      }
+      .pill i {
+        color: #22c55e;
+        font-size: 8px;
+        animation: bl 1.6s infinite;
+      }
+      @keyframes bl {
+        50% {
+          opacity: 0.3;
+        }
+      }
+      h1 {
+        font-size: clamp(38px, 7vw, 78px);
+        line-height: 1.04;
+        font-weight: 800;
+        letter-spacing: -0.04em;
+        margin: 20px 0 12px;
+      }
+      .ty {
+        font-size: clamp(17px, 2.4vw, 26px);
+        font-weight: 700;
+        min-height: 38px;
+      }
+      .ty::after {
+        content: "|";
+        color: var(--b);
+        animation: bl 1s infinite;
+      }
+      .hero p.d {
+        color: var(--mu);
+        max-width: 540px;
+        margin: 14px 0 28px;
+      }
+      .row {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      .soc {
+        display: flex;
+        gap: 10px;
+        margin-top: 26px;
+      }
+      .soc a {
+        width: 46px;
+        height: 46px;
+        border-radius: 14px;
+        display: grid;
+        place-items: center;
+        background: var(--s);
+        border: 1px solid var(--bd);
+        font-size: 19px;
+        transition: 0.25s;
+      }
+      .soc a:hover {
+        background: var(--g);
+        color: #fff;
+        transform: translateY(-4px);
+      }
+      .ph {
+        position: relative;
+        display: grid;
+        place-items: center;
+        padding: 20px;
+      }
+      .ph .fr {
+        position: relative;
+        width: min(380px, 100%);
+        aspect-ratio: 4/5;
+        border-radius: 36px;
+        padding: 5px;
+        background: var(--g);
+        animation: fl 6s ease-in-out infinite;
+      }
+      .ph .fr div {
+        width: 100%;
+        height: 100%;
+        border-radius: 32px;
+        background: linear-gradient(160deg, #ddd6ff, #ffd6ea);
+        display: grid;
+        place-items: center;
+        font-size: 90px;
+        font-weight: 800;
+        color: #fff;
+        overflow: hidden;
+        position: relative;
+      }
+      .ph img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      @keyframes fl {
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+      .cp2 {
+        position: absolute;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        padding: 10px 14px;
+        border-radius: 16px;
+        background: color-mix(in srgb, var(--s) 85%, transparent);
+        backdrop-filter: blur(12px);
+        border: 1px solid var(--bd);
+        box-shadow: var(--sh);
+        font-size: 12.5px;
+        font-weight: 700;
+        line-height: 1.3;
+      }
+      .cp2 i {
+        width: 34px;
+        height: 34px;
+        border-radius: 10px;
+        background: var(--g2);
+        color: #fff;
+        display: grid;
+        place-items: center;
+      }
+      .cp2 small {
+        display: block;
+        color: var(--mu);
+        font-weight: 500;
+        font-size: 11px;
+      }
+      .k1 {
+        top: 6%;
+        left: -4%;
+      }
+      .k2 {
+        bottom: 20%;
+        right: -4%;
+      }
+      .k3 {
+        bottom: 2%;
+        left: 6%;
+      }
+      .mq {
+        overflow: hidden;
+        border-block: 1px solid var(--bd);
+        background: var(--s);
+        padding: 16px 0;
+      }
+      .mq div {
+        display: flex;
+        gap: 46px;
+        width: max-content;
+        animation: mq 32s linear infinite;
+        font-weight: 800;
+        font-size: 18px;
+        color: var(--mu);
+      }
+      .mq span {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        white-space: nowrap;
+      }
+      .mq i {
+        color: var(--a);
+      }
+      @keyframes mq {
+        to {
+          transform: translateX(-50%);
+        }
+      }
+      .tt {
+        display: inline-block;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--b);
+        margin-bottom: 8px;
+      }
+      h2 {
+        font-size: clamp(28px, 4.4vw, 48px);
+        font-weight: 800;
+        letter-spacing: -0.03em;
+        line-height: 1.1;
+        margin-bottom: 12px;
+      }
+      .sub {
+        color: var(--mu);
+        max-width: 620px;
+        margin-bottom: clamp(24px, 4vw, 44px);
+      }
+      .card {
+        background: var(--s);
+        border: 1px solid var(--bd);
+        border-radius: 26px;
+        padding: clamp(18px, 2.5vw, 28px);
+        box-shadow: var(--sh);
+        transition: 0.3s;
+      }
+      .card:hover {
+        transform: translateY(-6px);
+        border-color: var(--a);
+      }
+      .bento {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 18px;
+      }
+      .ab {
+        grid-column: span 2;
+        grid-row: span 2;
+      }
+      .ab p {
+        color: var(--mu);
+        margin: 10px 0;
+      }
+      .ic {
+        width: 54px;
+        height: 54px;
+        border-radius: 17px;
+        background: var(--g);
+        display: grid;
+        place-items: center;
+        color: #fff;
+        font-size: 25px;
+        margin-bottom: 16px;
+        box-shadow: 0 10px 24px rgba(37, 99, 235, 0.3);
+      }
+      .card h3 {
+        font-size: 19px;
+        margin-bottom: 6px;
+        letter-spacing: -0.01em;
+      }
+      .card p {
+        color: var(--mu);
+        font-size: 14.5px;
+      }
+      .st b {
+        font-size: clamp(38px, 5vw, 54px);
+        font-weight: 800;
+        display: block;
+        line-height: 1.1;
+      }
+      .st span {
+        color: var(--mu);
+        font-size: 13.5px;
+        font-weight: 600;
+      }
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 16px;
+      }
+      .tags span {
+        padding: 7px 14px;
+        border-radius: 30px;
+        font-size: 12.5px;
+        font-weight: 700;
+        background: color-mix(in srgb, var(--a) 12%, transparent);
+        color: var(--a);
+      }
+      .tags span:nth-child(2n) {
+        background: color-mix(in srgb, var(--b) 12%, transparent);
+        color: var(--b);
+      }
+      .tags span:nth-child(3n) {
+        background: color-mix(in srgb, var(--c) 15%, transparent);
+        color: #0aa0ae;
+      }
+      .g4 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 18px;
+      }
+      .g3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+      }
+      .g2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+      }
+      .sk h3 {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 16px;
+      }
+      .sk h3 i {
+        color: var(--a);
+      }
+      .sr {
+        margin-bottom: 14px;
+      }
+      .sr div {
+        display: flex;
+        justify-content: space-between;
+        font-weight: 700;
+        font-size: 13.5px;
+        margin-bottom: 6px;
+      }
+      .bar {
+        height: 9px;
+        border-radius: 9px;
+        background: color-mix(in srgb, var(--a) 12%, transparent);
+        overflow: hidden;
+      }
+      .bar i {
+        display: block;
+        height: 100%;
+        width: 0;
+        border-radius: 9px;
+        background: var(--g);
+        transition: width 1.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+      }
+      .tabs {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-bottom: 24px;
+      }
+      .tabs button {
+        border: 1px solid var(--bd);
+        background: var(--s);
+        color: var(--mu);
+        padding: 10px 20px;
+        border-radius: 30px;
+        font-weight: 700;
+        font-size: 13.5px;
+        cursor: pointer;
+        font-family: inherit;
+        min-height: 44px;
+        transition: 0.2s;
+      }
+      .tabs button.on,
+      .tabs button:hover {
+        background: var(--g);
+        color: #fff;
+        border-color: transparent;
+      }
+      .hid {
+        display: none !important;
+      }
+      .pj {
+        padding: 0;
+        overflow: hidden;
+      }
+      .pj .im {
+        height: clamp(140px, 18vw, 190px);
+        display: grid;
+        place-items: center;
+        font-size: 54px;
+        color: #fffd;
+        position: relative;
+        overflow: hidden;
+      }
+      .pj .im::after {
+        content: "";
+        position: absolute;
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        background: #ffffff22;
+        right: -40px;
+        top: -50px;
+      }
+      .pj .bd {
+        padding: 20px 22px 24px;
+      }
+      .pj .tg {
+        display: flex;
+        gap: 6px;
+        flex-wrap: wrap;
+        margin: 12px 0;
+      }
+      .pj .tg span {
+        font-size: 11.5px;
+        font-weight: 700;
+        padding: 4px 11px;
+        border-radius: 20px;
+        background: color-mix(in srgb, var(--a) 10%, transparent);
+        color: var(--a);
+      }
+      .lk {
+        font-weight: 800;
+        font-size: 13.5px;
+        color: var(--a);
+        text-decoration: none;
+        display: inline-flex;
+        gap: 6px;
+        align-items: center;
+      }
+      .lk:hover {
+        gap: 10px;
+      }
+      .sv .n {
+        position: absolute;
+        top: 18px;
+        right: 22px;
+        font-size: 46px;
+        font-weight: 800;
+        opacity: 0.08;
+      }
+      .sv {
+        position: relative;
+      }
+      .sv ul {
+        list-style: none;
+        margin-top: 12px;
+      }
+      .sv li {
+        font-size: 13.5px;
+        color: var(--mu);
+        padding: 4px 0;
+      }
+      .sv li::before {
+        content: "✓";
+        color: var(--a);
+        font-weight: 800;
+        margin-right: 8px;
+      }
+      .stp {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 16px;
+        counter-reset: s;
+      }
+      .stp .card {
+        counter-increment: s;
+        padding-top: 60px;
+        position: relative;
+      }
+      .stp .card::before {
+        content: counter(s, decimal-leading-zero);
+        position: absolute;
+        top: 16px;
+        left: 22px;
+        font-size: 34px;
+        font-weight: 800;
+        background: var(--g);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .tl {
+        position: relative;
+        padding-left: 32px;
+        max-width: 820px;
+      }
+      .tl::before {
+        content: "";
+        position: absolute;
+        left: 8px;
+        top: 8px;
+        bottom: 8px;
+        width: 3px;
+        border-radius: 3px;
+        background: var(--g);
+      }
+      .ti {
+        position: relative;
+        margin-bottom: 18px;
+      }
+      .ti::before {
+        content: "";
+        position: absolute;
+        left: -32px;
+        top: 26px;
+        width: 19px;
+        height: 19px;
+        border-radius: 50%;
+        background: var(--bg);
+        border: 4px solid var(--b);
+      }
+      .ti small {
+        color: var(--b);
+        font-weight: 800;
+        font-size: 12px;
+        letter-spacing: 0.08em;
+      }
+      .tp {
+        display: none;
+      }
+      .tp.on {
+        display: block;
+      }
+      details {
+        background: var(--s);
+        border: 1px solid var(--bd);
+        border-radius: 20px;
+        padding: 4px 22px;
+        margin-bottom: 12px;
+        transition: 0.2s;
+      }
+      details[open] {
+        border-color: var(--a);
+        box-shadow: var(--sh);
+      }
+      summary {
+        cursor: pointer;
+        font-weight: 700;
+        padding: 16px 0;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        min-height: 48px;
+      }
+      summary::-webkit-details-marker {
+        display: none;
+      }
+      summary::after {
+        content: "+";
+        font-size: 24px;
+        color: var(--b);
+        transition: 0.2s;
+      }
+      details[open] summary::after {
+        transform: rotate(45deg);
+      }
+      details p {
+        color: var(--mu);
+        padding-bottom: 16px;
+      }
+      .ct {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 20px;
+      }
+      form {
+        display: grid;
+        gap: 12px;
+      }
+      input,
+      textarea {
+        width: 100%;
+        padding: 15px 18px;
+        border-radius: 16px;
+        border: 1px solid var(--bd);
+        background: var(--bg);
+        color: var(--tx);
+        font: inherit;
+        font-size: 16px;
+        outline: 0;
+        transition: 0.2s;
+      }
+      input:focus,
+      textarea:focus {
+        border-color: var(--a);
+        box-shadow: 0 0 0 4px color-mix(in srgb, var(--a) 20%, transparent);
+      }
+      .cl {
+        display: flex;
+        gap: 14px;
+        align-items: center;
+        text-decoration: none;
+        padding: 12px 0;
+      }
+      .cl .ic {
+        margin: 0;
+        flex-shrink: 0;
+        width: 48px;
+        height: 48px;
+        font-size: 21px;
+      }
+      .cl small {
+        display: block;
+        color: var(--mu);
+        font-size: 13px;
+      }
+      .cl b {
+        font-size: 14.5px;
+      }
+      .cta {
+        text-align: center;
+        background: var(--g);
+        color: #fff;
+        border: 0;
+        position: relative;
+        overflow: hidden;
+      }
+      .cta p {
+        color: #ffffffdd;
+        max-width: 520px;
+        margin: 8px auto 20px;
+      }
+      .cta .btn {
+        background: #fff;
+        color: #1d4ed8;
+      }
+      footer {
+        padding: 30px 0;
+        border-top: 1px solid var(--bd);
+        text-align: center;
+        color: var(--mu);
+        font-size: 13.5px;
+      }
+      .rv {
+        opacity: 0;
+        transform: translateY(28px);
+        transition:
+          opacity 0.8s,
+          transform 0.8s;
+      }
+      .rv.in {
+        opacity: 1;
+        transform: none;
+      }
+      .top {
+        position: fixed;
+        right: max(18px, env(safe-area-inset-right));
+        bottom: 88px;
+        z-index: 90;
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.3s;
+      }
+      .top.s {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .bot {
+        position: fixed;
+        right: max(18px, env(safe-area-inset-right));
+        bottom: max(18px, env(safe-area-inset-bottom));
+        z-index: 200;
+        width: 58px;
+        height: 58px;
+        border: 0;
+        border-radius: 50%;
+        background: var(--g);
+        color: #fff;
+        font-size: 25px;
+        box-shadow: 0 10px 30px rgba(6, 182, 212, 0.45);
+        cursor: pointer;
+        transition: 0.25s;
+      }
+      .bot:hover {
+        transform: scale(1.1) rotate(-8deg);
+      }
+      .cw {
+        position: fixed;
+        right: max(18px, env(safe-area-inset-right));
+        bottom: 88px;
+        z-index: 200;
+        width: min(360px, calc(100vw - 32px));
+        height: min(450px, calc(100dvh - 120px));
+        display: none;
+        flex-direction: column;
+        background: var(--s);
+        border: 1px solid var(--bd);
+        border-radius: 24px;
+        overflow: hidden;
+        box-shadow: 0 24px 60px rgba(40, 20, 120, 0.3);
+      }
+      .cw.open {
+        display: flex;
+      }
+      .cw header {
+        position: static;
+        background: var(--g);
+        color: #fff;
+        padding: 15px 18px;
+        font-weight: 800;
+      }
+      .cm {
+        flex: 1;
+        overflow-y: auto;
+        padding: 14px;
+        display: flex;
+        flex-direction: column;
+      }
+      .m {
+        max-width: 86%;
+        padding: 10px 14px;
+        margin-bottom: 9px;
+        border-radius: 16px;
+        font-size: 13px;
+        line-height: 1.55;
+        white-space: pre-wrap;
+        background: color-mix(in srgb, var(--a) 10%, transparent);
+        border-bottom-left-radius: 4px;
+      }
+      .m.u {
+        background: var(--a);
+        color: #fff;
+        margin-left: auto;
+        border-radius: 16px 16px 4px 16px;
+      }
+      .sg {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        padding: 0 12px 10px;
+      }
+      .sg button {
+        border: 1px solid var(--bd);
+        background: var(--bg);
+        color: var(--a);
+        border-radius: 20px;
+        padding: 6px 12px;
+        font-size: 12px;
+        font-weight: 700;
+        cursor: pointer;
+        min-height: 34px;
+      }
+      .cf {
+        display: flex;
+        gap: 8px;
+        padding: 10px;
+        border-top: 1px solid var(--bd);
+      }
+      .cf input {
+        padding: 10px 14px;
+        border-radius: 12px;
+      }
+      .cf button {
+        border: 0;
+        background: var(--a);
+        color: #fff;
+        border-radius: 12px;
+        width: 46px;
+        cursor: pointer;
+      }
+      @media (max-width: 1000px) {
+        .hero {
+          grid-template-columns: 1fr;
+          text-align: center;
+          padding-top: 100px;
+          min-height: auto;
+        }
+        .hero p.d {
+          margin-inline: auto;
+        }
+        .row,
+        .soc {
+          justify-content: center;
+        }
+        .ph {
+          order: -1;
+        }
+        .ph .fr {
+          width: min(300px, 80%);
+        }
+        .bento,
+        .g4 {
+          grid-template-columns: 1fr 1fr;
+        }
+        .g3 {
+          grid-template-columns: 1fr 1fr;
+        }
+        .stp {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        .ct {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 760px) {
+        .nb nav {
+          position: absolute;
+          top: 66px;
+          left: 0;
+          right: 0;
+          flex-direction: column;
+          padding: 12px;
+          border-radius: 24px;
+          background: var(--s);
+          border: 1px solid var(--bd);
+          box-shadow: var(--sh);
+          display: none;
+        }
+        .nb nav.open {
+          display: flex;
+        }
+        .nb nav a {
+          padding: 14px 16px;
+          font-size: 15px;
+        }
+        .mb {
+          display: grid;
+        }
+        .nb .btn {
+          display: none;
+        }
+      }
+      @media (max-width: 600px) {
+        .bento,
+        .g4,
+        .g3,
+        .g2,
+        .stp {
+          grid-template-columns: 1fr;
+        }
+        .ab {
+          grid-column: auto;
+          grid-row: auto;
+        }
+        .k1,
+        .k2 {
+          display: none;
+        }
+        .btn {
+          width: 100%;
+        }
+        .row .btn {
+          flex: 1 1 100%;
+        }
+        .bento .st {
+          display: inline-block;
+        }
+        .bento {
+          grid-template-columns: 1fr 1fr;
+        }
+        .ab {
+          grid-column: 1/-1;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          animation: none !important;
+          transition: none !important;
+        }
+        .rv {
+          opacity: 1;
+          transform: none;
+        }
+      }
+      .ex {
+        list-style: none;
+        margin-top: 14px;
+      }
+      .ex li {
+        position: relative;
+        padding: 6px 0 6px 28px;
+        font-size: 14px;
+        color: var(--mu);
+      }
+      .ex li::before {
+        content: "\2713";
+        position: absolute;
+        left: 0;
+        top: 6px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: var(--g);
+        color: #fff;
+        font-size: 11px;
+        font-weight: 800;
+        display: grid;
+        place-items: center;
+      }
+      .co {
+        font-weight: 700;
+        color: var(--tx) !important;
+        margin-top: 2px;
+      }
+      .co i {
+        color: var(--a);
+        margin-right: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="aur"></div>
+    <header>
+      <div class="nb">
+        <a class="lg" href="#home">Nilesh More<span class="g">.</span></a>
+        <nav id="nv">
+          <a class="on" href="#home">Home</a><a href="#about">About</a
+          ><a href="#skills">Skills</a><a href="#projects">Projects</a
+          ><a href="#services">Services</a><a href="#journey">Journey</a
+          ><a href="#contact">Contact</a>
+        </nav>
+        <button
+          class="ib"
+          id="th"
+          aria-label="Switch to original theme"
+          title="Switch to original theme"
+        >
+          <i class="bi bi-sun-fill"></i></button
+        ><a
+          class="btn p"
+          style="min-height: 42px; padding: 8px 20px"
+          href="#contact"
+          >Hire Me</a
+        ><button class="ib mb" id="mn" aria-label="Menu">
+          <i class="bi bi-list"></i>
+        </button>
+      </div>
+    </header>
 
-<section class="hero w" id="home">
- <div><span class="pill"><i class="bi bi-circle-fill"></i>Open to Opportunities</span>
-  <h1>Hi, I'm <span class="g">Nilesh More</span></h1><div class="ty" id="ty"></div>
-  <p class="d">.NET Full Stack Developer with 4 years of experience building scalable, secure and high-performance enterprise web applications using ASP.NET, MVC, .NET Core and SQL Server.</p>
-  <div class="row"><a class="btn p" href="mailto:nileshmore75999@gmail.com"><i class="bi bi-send-fill"></i>Hire Me</a><a class="btn" href="#projects"><i class="bi bi-grid"></i>View Projects</a><a class="btn wab" data-wa><i class="bi bi-whatsapp"></i>Discuss</a><a class="btn" href="Nilesh_More_Resume.pdf" download><i class="bi bi-download"></i>Resume</a></div>
-  <div class="soc"><a href="https://linkedin.com/in/nilesh-more-13021026a" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a><a href="mailto:nileshmore75999@gmail.com" aria-label="Email"><i class="bi bi-envelope-fill"></i></a><a class="wa" data-wa aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a><a class="cal" data-call aria-label="Call me"><i class="bi bi-telephone-fill"></i></a></div></div>
- <div class="ph"><div class="fr"><div>NM<img src="profile.jpeg" alt="Nilesh More" onerror="this.remove()"></div></div>
-  <div class="cp2 k1"><i class="bi bi-code-slash"></i><div>.NET Full Stack<small>ASP.NET · C# · SQL</small></div></div>
-  <div class="cp2 k2"><i class="bi bi-diagram-3"></i><div>BO–BAL–DAL<small>Clean architecture</small></div></div>
-  <div class="cp2 k3"><i class="bi bi-database"></i><div>SQL Server<small>Optimized queries</small></div></div></div>
-</section>
+    <section class="hero w" id="home">
+      <div>
+        <span class="pill"
+          ><i class="bi bi-circle-fill"></i>Open to Opportunities</span
+        >
+        <h1>Hi, I'm <span class="g">Nilesh More</span></h1>
+        <div class="ty" id="ty"></div>
+        <p class="d">
+          .NET Full Stack Developer with 4 years of experience building
+          scalable, secure and high-performance enterprise web applications
+          using ASP.NET, MVC, .NET Core and SQL Server.
+        </p>
+        <div class="row">
+          <a class="btn p" href="mailto:nileshmore75999@gmail.com"
+            ><i class="bi bi-send-fill"></i>Hire Me</a
+          ><a class="btn" href="#projects"
+            ><i class="bi bi-grid"></i>View Projects</a
+          ><a class="btn wab" data-wa><i class="bi bi-whatsapp"></i>Discuss</a
+          ><a class="btn" href="Nilesh_More_Resume.pdf" download
+            ><i class="bi bi-download"></i>Resume</a
+          >
+        </div>
+        <div class="soc">
+          <a
+            href="https://linkedin.com/in/nilesh-more-13021026a"
+            target="_blank"
+            rel="noopener"
+            aria-label="LinkedIn"
+            ><i class="bi bi-linkedin"></i></a
+          ><a href="mailto:nileshmore75999@gmail.com" aria-label="Email"
+            ><i class="bi bi-envelope-fill"></i></a
+          ><a class="wa" data-wa aria-label="WhatsApp"
+            ><i class="bi bi-whatsapp"></i></a
+          ><a class="cal" data-call aria-label="Call me"
+            ><i class="bi bi-telephone-fill"></i
+          ></a>
+        </div>
+      </div>
+      <div class="ph">
+        <div class="fr">
+          <div>
+            NM<img
+              src="profile.jpeg"
+              alt="Nilesh More"
+              onerror="this.remove()"
+            />
+          </div>
+        </div>
+        <div class="cp2 k1">
+          <i class="bi bi-code-slash"></i>
+          <div>.NET Full Stack<small>ASP.NET · C# · SQL</small></div>
+        </div>
+        <div class="cp2 k2">
+          <i class="bi bi-diagram-3"></i>
+          <div>BO–BAL–DAL<small>Clean architecture</small></div>
+        </div>
+        <div class="cp2 k3">
+          <i class="bi bi-database"></i>
+          <div>SQL Server<small>Optimized queries</small></div>
+        </div>
+      </div>
+    </section>
 
-<div class="mq" aria-hidden="true"><div>
- <span><i class="bi bi-filetype-cs"></i>C#</span><span><i class="bi bi-microsoft"></i>ASP.NET MVC</span><span><i class="bi bi-microsoft"></i>.NET Core</span><span><i class="bi bi-braces"></i>Web API</span><span><i class="bi bi-diagram-3"></i>Entity Framework</span><span><i class="bi bi-database"></i>SQL Server</span><span><i class="bi bi-database"></i>MySQL</span><span><i class="bi bi-filetype-js"></i>JavaScript</span><span><i class="bi bi-filetype-js"></i>jQuery</span><span><i class="bi bi-bootstrap"></i>Bootstrap</span>
- <span><i class="bi bi-filetype-cs"></i>C#</span><span><i class="bi bi-microsoft"></i>ASP.NET MVC</span><span><i class="bi bi-microsoft"></i>.NET Core</span><span><i class="bi bi-braces"></i>Web API</span><span><i class="bi bi-diagram-3"></i>Entity Framework</span><span><i class="bi bi-database"></i>SQL Server</span><span><i class="bi bi-database"></i>MySQL</span><span><i class="bi bi-filetype-js"></i>JavaScript</span><span><i class="bi bi-filetype-js"></i>jQuery</span><span><i class="bi bi-bootstrap"></i>Bootstrap</span></div></div>
+    <div class="mq" aria-hidden="true">
+      <div>
+        <span><i class="bi bi-filetype-cs"></i>C#</span
+        ><span><i class="bi bi-microsoft"></i>ASP.NET MVC</span
+        ><span><i class="bi bi-microsoft"></i>.NET Core</span
+        ><span><i class="bi bi-braces"></i>Web API</span
+        ><span><i class="bi bi-diagram-3"></i>Entity Framework</span
+        ><span><i class="bi bi-database"></i>SQL Server</span
+        ><span><i class="bi bi-database"></i>MySQL</span
+        ><span><i class="bi bi-filetype-js"></i>JavaScript</span
+        ><span><i class="bi bi-filetype-js"></i>jQuery</span
+        ><span><i class="bi bi-bootstrap"></i>Bootstrap</span>
+        <span><i class="bi bi-filetype-cs"></i>C#</span
+        ><span><i class="bi bi-microsoft"></i>ASP.NET MVC</span
+        ><span><i class="bi bi-microsoft"></i>.NET Core</span
+        ><span><i class="bi bi-braces"></i>Web API</span
+        ><span><i class="bi bi-diagram-3"></i>Entity Framework</span
+        ><span><i class="bi bi-database"></i>SQL Server</span
+        ><span><i class="bi bi-database"></i>MySQL</span
+        ><span><i class="bi bi-filetype-js"></i>JavaScript</span
+        ><span><i class="bi bi-filetype-js"></i>jQuery</span
+        ><span><i class="bi bi-bootstrap"></i>Bootstrap</span>
+      </div>
+    </div>
 
-<section id="about"><div class="w"><span class="tt rv">About me</span><h2 class="rv">Build. Optimize. <span class="g">Deliver.</span></h2><p class="sub rv">Four years of building enterprise web applications, from database design to deployment on client servers.</p>
- <div class="bento">
-  <div class="card ab rv"><div class="ic"><i class="bi bi-person-heart"></i></div><h3>.NET Full Stack Developer</h3><p>I develop and maintain enterprise-level web applications using ASP.NET, MVC and SQL Server. I have worked across the full SDLC, database design and performance optimization, with a focus on secure, scalable and maintainable solutions using the BO–BAL–DAL pattern.</p><p>I am proficient in C# and object-oriented programming, experienced with .NET and .NET Core, and skilled in writing SQL queries, stored procedures and joins in Microsoft SQL Server.</p><div class="tags"><span>C#</span><span>ASP.NET MVC</span><span>.NET Core</span><span>SQL Server</span><span>Web API</span><span>OOPs</span><span>SDLC</span></div></div>
-  <div class="card st rv"><b class="g" data-n="5" data-s="+">0</b><span>Projects</span></div>
-  <div class="card st rv"><b class="g" data-n="4" data-s="+">0</b><span>Years Experience</span></div>
-  <div class="card st rv"><b class="g" data-n="3">0</b><span>Companies</span></div>
-  <div class="card st rv"><b class="g" data-n="1">0</b><span>Certification</span></div>
- </div></div></section>
+    <section id="about">
+      <div class="w">
+        <span class="tt rv">About me</span>
+        <h2 class="rv">Build. Optimize. <span class="g">Deliver.</span></h2>
+        <p class="sub rv">
+          Four years of building enterprise web applications, from database
+          design to deployment on client servers.
+        </p>
+        <div class="bento">
+          <div class="card ab rv">
+            <div class="ic"><i class="bi bi-person-heart"></i></div>
+            <h3>.NET Full Stack Developer</h3>
+            <p>
+              I develop and maintain enterprise-level web applications using
+              ASP.NET, MVC and SQL Server. I have worked across the full SDLC,
+              database design and performance optimization, with a focus on
+              secure, scalable and maintainable solutions using the BO–BAL–DAL
+              pattern.
+            </p>
+            <p>
+              I am proficient in C# and object-oriented programming, experienced
+              with .NET and .NET Core, and skilled in writing SQL queries,
+              stored procedures and joins in Microsoft SQL Server.
+            </p>
+            <div class="tags">
+              <span>C#</span><span>ASP.NET MVC</span><span>.NET Core</span
+              ><span>SQL Server</span><span>Web API</span><span>OOPs</span
+              ><span>SDLC</span>
+            </div>
+          </div>
+          <div class="card st rv">
+            <b class="g" data-n="5" data-s="+">0</b><span>Projects</span>
+          </div>
+          <div class="card st rv">
+            <b class="g" data-n="4" data-s="+">0</b
+            ><span>Years Experience</span>
+          </div>
+          <div class="card st rv">
+            <b class="g" data-n="3">0</b><span>Companies</span>
+          </div>
+          <div class="card st rv">
+            <b class="g" data-n="1">0</b><span>Certification</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<section id="skills"><div class="w"><span class="tt rv">Skills</span><h2 class="rv">My <span class="g">Tech Stack</span></h2><p class="sub rv">Languages, frameworks and tools I use to build and ship enterprise applications.</p>
- <div class="g2" id="sk">
-  <div class="card sk rv"><h3><i class="bi bi-hdd-network"></i>Backend &amp; Frameworks</h3><div class="sr"><div><span>C# / ASP.NET / MVC</span><span>85%</span></div><div class="bar"><i data-w="85"></i></div></div><div class="sr"><div><span>.NET Core / Web API / Entity Framework</span><span>75%</span></div><div class="bar"><i data-w="75"></i></div></div></div>
-  <div class="card sk rv"><h3><i class="bi bi-window-desktop"></i>Frontend</h3><div class="sr"><div><span>HTML5 / CSS / Bootstrap</span><span>80%</span></div><div class="bar"><i data-w="80"></i></div></div><div class="sr"><div><span>JavaScript / jQuery / AJAX</span><span>80%</span></div><div class="bar"><i data-w="80"></i></div></div></div>
-  <div class="card sk rv"><h3><i class="bi bi-database"></i>Database</h3><div class="sr"><div><span>MS SQL Server (Stored Procedures, Joins)</span><span>85%</span></div><div class="bar"><i data-w="85"></i></div></div><div class="sr"><div><span>MySQL</span><span>65%</span></div><div class="bar"><i data-w="65"></i></div></div></div>
-  <div class="card sk rv"><h3><i class="bi bi-tools"></i>Tools &amp; Concepts</h3><div class="sr"><div><span>Visual Studio / VS Code / Postman</span><span>85%</span></div><div class="bar"><i data-w="85"></i></div></div><div class="sr"><div><span>Jasper Reports (JRXML)</span><span>70%</span></div><div class="bar"><i data-w="70"></i></div></div></div>
- </div></div></section>
+    <section id="skills">
+      <div class="w">
+        <span class="tt rv">Skills</span>
+        <h2 class="rv">My <span class="g">Tech Stack</span></h2>
+        <p class="sub rv">
+          Languages, frameworks and tools I use to build and ship enterprise
+          applications.
+        </p>
+        <div class="g2" id="sk">
+          <div class="card sk rv">
+            <h3><i class="bi bi-hdd-network"></i>Backend &amp; Frameworks</h3>
+            <div class="sr">
+              <div><span>C# / ASP.NET / MVC</span><span>85%</span></div>
+              <div class="bar"><i data-w="85"></i></div>
+            </div>
+            <div class="sr">
+              <div>
+                <span>.NET Core / Web API / Entity Framework</span
+                ><span>75%</span>
+              </div>
+              <div class="bar"><i data-w="75"></i></div>
+            </div>
+          </div>
+          <div class="card sk rv">
+            <h3><i class="bi bi-window-desktop"></i>Frontend</h3>
+            <div class="sr">
+              <div><span>HTML5 / CSS / Bootstrap</span><span>80%</span></div>
+              <div class="bar"><i data-w="80"></i></div>
+            </div>
+            <div class="sr">
+              <div><span>JavaScript / jQuery / AJAX</span><span>80%</span></div>
+              <div class="bar"><i data-w="80"></i></div>
+            </div>
+          </div>
+          <div class="card sk rv">
+            <h3><i class="bi bi-database"></i>Database</h3>
+            <div class="sr">
+              <div>
+                <span>MS SQL Server (Stored Procedures, Joins)</span
+                ><span>85%</span>
+              </div>
+              <div class="bar"><i data-w="85"></i></div>
+            </div>
+            <div class="sr">
+              <div><span>MySQL</span><span>65%</span></div>
+              <div class="bar"><i data-w="65"></i></div>
+            </div>
+          </div>
+          <div class="card sk rv">
+            <h3><i class="bi bi-tools"></i>Tools &amp; Concepts</h3>
+            <div class="sr">
+              <div>
+                <span>Visual Studio / VS Code / Postman</span><span>85%</span>
+              </div>
+              <div class="bar"><i data-w="85"></i></div>
+            </div>
+            <div class="sr">
+              <div><span>Jasper Reports (JRXML)</span><span>70%</span></div>
+              <div class="bar"><i data-w="70"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<section id="projects"><div class="w"><span class="tt rv">Portfolio</span><h2 class="rv">Featured <span class="g">Projects</span></h2><p class="sub rv">Enterprise and client projects I have worked on using ASP.NET, MVC, C# and SQL Server.</p>
- <div class="tabs" id="pt"><button class="on" data-f="all">All</button><button data-f="ent">Enterprise</button><button data-f="web">Web Apps</button></div>
- <div class="g3" id="pg">
+    <section id="projects">
+      <div class="w">
+        <span class="tt rv">Portfolio</span>
+        <h2 class="rv">Featured <span class="g">Projects</span></h2>
+        <p class="sub rv">
+          Enterprise and client projects I have worked on using ASP.NET, MVC, C#
+          and SQL Server.
+        </p>
+        <div class="tabs" id="pt">
+          <button class="on" data-f="all">All</button
+          ><button data-f="ent">Enterprise</button
+          ><button data-f="web">Web Apps</button>
+        </div>
+        <div class="g3" id="pg">
+          <article class="card pj rv" data-c="web">
+            <div
+              class="im"
+              style="background: linear-gradient(135deg, #6d4aff, #ff4f9a)"
+            >
+              <i class="bi bi-wifi"></i>
+            </div>
+            <div class="bd">
+              <h3>
+                H8 Service, Subscriber &amp; Revenue Management System (H8SSRMS)
+              </h3>
+              <p>
+                Customer management web application for an internet service
+                provider, streamlining customer accounts, services, billing and
+                inquiries for both customers and administrators.
+              </p>
+              <div class="tg">
+                <span>ASP.NET</span><span>MVC</span><span>C#</span
+                ><span>APIs</span><span>jQuery</span><span>JavaScript</span
+                ><span>SQL</span>
+              </div>
+              <button class="lk pbtn" type="button">
+                View details <i class="bi bi-arrow-right"></i>
+              </button>
+              <div class="pd" hidden>
+                <p class="role">
+                  <b>My role:</b> Worked with the development and QA teams on
+                  the ASP.NET MVC system architecture and built customer-facing,
+                  billing and role-based features.
+                </p>
+                <ul class="ex">
+                  <li>
+                    Secure, role-based access to information and functions
+                  </li>
+                  <li>Customer account creation and profile updates</li>
+                  <li>Subscription plan management</li>
+                  <li>Billing history and payment details</li>
+                  <li>Invoice generation</li>
+                  <li>Service requests and issue reporting</li>
+                  <li>Inquiry status tracking</li>
+                </ul>
+              </div>
+            </div>
+          </article>
 
-  <article class="card pj rv" data-c="web">
-   <div class="im" style="background:linear-gradient(135deg,#6d4aff,#ff4f9a)"><i class="bi bi-wifi"></i></div>
-   <div class="bd"><h3>H8 Service, Subscriber &amp; Revenue Management System (H8SSRMS)</h3>
-    <p>Customer management web application for an internet service provider, streamlining customer accounts, services, billing and inquiries for both customers and administrators.</p>
-    <div class="tg"><span>ASP.NET</span><span>MVC</span><span>C#</span><span>APIs</span><span>jQuery</span><span>JavaScript</span><span>SQL</span></div>
-    <button class="lk pbtn" type="button">View details <i class="bi bi-arrow-right"></i></button>
-    <div class="pd" hidden>
-     <p class="role"><b>My role:</b> Worked with the development and QA teams on the ASP.NET MVC system architecture and built customer-facing, billing and role-based features.</p>
-     <ul class="ex"><li>Secure, role-based access to information and functions</li><li>Customer account creation and profile updates</li><li>Subscription plan management</li><li>Billing history and payment details</li><li>Invoice generation</li><li>Service requests and issue reporting</li><li>Inquiry status tracking</li></ul>
-    </div></div></article>
+          <article class="card pj rv" data-c="web">
+            <div
+              class="im"
+              style="background: linear-gradient(135deg, #14c8d8, #6d4aff)"
+            >
+              <i class="bi bi-people"></i>
+            </div>
+            <div class="bd">
+              <h3>Social Media Web Application</h3>
+              <p>
+                Client project: a social network for the education industry
+                where users share posts, thoughts and quotes, and students share
+                interview experiences and job openings.
+              </p>
+              <div class="tg">
+                <span>.NET</span><span>MVC</span><span>C#</span><span>APIs</span
+                ><span>jQuery</span><span>SQL</span>
+              </div>
+              <button class="lk pbtn" type="button">
+                View details <i class="bi bi-arrow-right"></i>
+              </button>
+              <div class="pd" hidden>
+                <p class="role">
+                  <b>My role:</b> Built secure registration and login and the
+                  interactive social features of the platform.
+                </p>
+                <ul class="ex">
+                  <li>Secure user registration and login</li>
+                  <li>Likes and comments</li>
+                  <li>Image sharing</li>
+                  <li>Article posting for diverse content</li>
+                  <li>Interview experience and job opening posts</li>
+                </ul>
+              </div>
+            </div>
+          </article>
 
-  <article class="card pj rv" data-c="web">
-   <div class="im" style="background:linear-gradient(135deg,#14c8d8,#6d4aff)"><i class="bi bi-people"></i></div>
-   <div class="bd"><h3>Social Media Web Application</h3>
-    <p>Client project: a social network for the education industry where users share posts, thoughts and quotes, and students share interview experiences and job openings.</p>
-    <div class="tg"><span>.NET</span><span>MVC</span><span>C#</span><span>APIs</span><span>jQuery</span><span>SQL</span></div>
-    <button class="lk pbtn" type="button">View details <i class="bi bi-arrow-right"></i></button>
-    <div class="pd" hidden>
-     <p class="role"><b>My role:</b> Built secure registration and login and the interactive social features of the platform.</p>
-     <ul class="ex"><li>Secure user registration and login</li><li>Likes and comments</li><li>Image sharing</li><li>Article posting for diverse content</li><li>Interview experience and job opening posts</li></ul>
-    </div></div></article>
+          <article class="card pj rv" data-c="ent">
+            <div
+              class="im"
+              style="background: linear-gradient(135deg, #22c55e, #14c8d8)"
+            >
+              <i class="bi bi-shield-check"></i>
+            </div>
+            <div class="bd">
+              <h3>HZL Insurance MIS</h3>
+              <p>
+                Centralized Management Information System for Hindustan Zinc
+                Limited to manage employee insurance data, policy requests,
+                approvals and claim tracking, automating end-to-end insurance
+                workflows.
+              </p>
+              <div class="tg">
+                <span>ASP.NET</span><span>MVC</span><span>C#</span
+                ><span>APIs</span><span>jQuery</span><span>JavaScript</span
+                ><span>SQL</span>
+              </div>
+              <button class="lk pbtn" type="button">
+                View details <i class="bi bi-arrow-right"></i>
+              </button>
+              <div class="pd" hidden>
+                <p class="role">
+                  <b>My role:</b> Developed and maintained modules, MIS reports,
+                  request and approval workflows, and secure role-based access.
+                </p>
+                <ul class="ex">
+                  <li>Employee insurance enrollment and policy management</li>
+                  <li>Dependent details and claim tracking</li>
+                  <li>
+                    MIS reports: policy status, monthly summaries, approvals,
+                    claim analytics
+                  </li>
+                  <li>
+                    APIs, Web Forms and UI components for request and approval
+                    workflows
+                  </li>
+                  <li>
+                    Secure login, session management and role-based access for
+                    HR, admin and employees
+                  </li>
+                  <li>
+                    File upload for policy documents, claim forms and approval
+                    records
+                  </li>
+                  <li>HR data integration and monitoring dashboards</li>
+                  <li>UAT, functional testing and documentation</li>
+                </ul>
+              </div>
+            </div>
+          </article>
 
-  <article class="card pj rv" data-c="ent">
-   <div class="im" style="background:linear-gradient(135deg,#22c55e,#14c8d8)"><i class="bi bi-shield-check"></i></div>
-   <div class="bd"><h3>HZL Insurance MIS</h3>
-    <p>Centralized Management Information System for Hindustan Zinc Limited to manage employee insurance data, policy requests, approvals and claim tracking, automating end-to-end insurance workflows.</p>
-    <div class="tg"><span>ASP.NET</span><span>MVC</span><span>C#</span><span>APIs</span><span>jQuery</span><span>JavaScript</span><span>SQL</span></div>
-    <button class="lk pbtn" type="button">View details <i class="bi bi-arrow-right"></i></button>
-    <div class="pd" hidden>
-     <p class="role"><b>My role:</b> Developed and maintained modules, MIS reports, request and approval workflows, and secure role-based access.</p>
-     <ul class="ex"><li>Employee insurance enrollment and policy management</li><li>Dependent details and claim tracking</li><li>MIS reports: policy status, monthly summaries, approvals, claim analytics</li><li>APIs, Web Forms and UI components for request and approval workflows</li><li>Secure login, session management and role-based access for HR, admin and employees</li><li>File upload for policy documents, claim forms and approval records</li><li>HR data integration and monitoring dashboards</li><li>UAT, functional testing and documentation</li></ul>
-    </div></div></article>
+          <article class="card pj rv" data-c="ent">
+            <div
+              class="im"
+              style="background: linear-gradient(135deg, #ef4444, #ffb020)"
+            >
+              <i class="bi bi-heart-pulse"></i>
+            </div>
+            <div class="bd">
+              <h3>Medical &amp; Occupational Health System</h3>
+              <p>
+                Centralized platform for employee health records, periodic
+                medical check-ups and occupation-specific fitness assessments,
+                covering screening, lab tests, doctor evaluations and fitness
+                certification.
+              </p>
+              <div class="tg">
+                <span>ASP.NET</span><span>MVC</span><span>C#</span
+                ><span>APIs</span><span>jQuery</span><span>JavaScript</span
+                ><span>SQL</span>
+              </div>
+              <button class="lk pbtn" type="button">
+                View details <i class="bi bi-arrow-right"></i>
+              </button>
+              <div class="pd" hidden>
+                <p class="role">
+                  <b>My role:</b> Worked on health record modules, dashboards,
+                  SQL performance and secure handling of sensitive health data.
+                </p>
+                <ul class="ex">
+                  <li>Employee medical records and health assessments</li>
+                  <li>Periodic check-ups and fitness certificates</li>
+                  <li>
+                    Dashboards for health trends, test history, pending
+                    assessments and risk categories
+                  </li>
+                  <li>
+                    Faster record retrieval using optimized SQL queries,
+                    indexing and caching
+                  </li>
+                  <li>Role-based access, session management and audit logs</li>
+                  <li>
+                    Coordination with medical teams, safety officers and HR
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </article>
 
-  <article class="card pj rv" data-c="ent">
-   <div class="im" style="background:linear-gradient(135deg,#ef4444,#ffb020)"><i class="bi bi-heart-pulse"></i></div>
-   <div class="bd"><h3>Medical &amp; Occupational Health System</h3>
-    <p>Centralized platform for employee health records, periodic medical check-ups and occupation-specific fitness assessments, covering screening, lab tests, doctor evaluations and fitness certification.</p>
-    <div class="tg"><span>ASP.NET</span><span>MVC</span><span>C#</span><span>APIs</span><span>jQuery</span><span>JavaScript</span><span>SQL</span></div>
-    <button class="lk pbtn" type="button">View details <i class="bi bi-arrow-right"></i></button>
-    <div class="pd" hidden>
-     <p class="role"><b>My role:</b> Worked on health record modules, dashboards, SQL performance and secure handling of sensitive health data.</p>
-     <ul class="ex"><li>Employee medical records and health assessments</li><li>Periodic check-ups and fitness certificates</li><li>Dashboards for health trends, test history, pending assessments and risk categories</li><li>Faster record retrieval using optimized SQL queries, indexing and caching</li><li>Role-based access, session management and audit logs</li><li>Coordination with medical teams, safety officers and HR</li></ul>
-    </div></div></article>
+          <article class="card pj rv" data-c="ent">
+            <div
+              class="im"
+              style="background: linear-gradient(135deg, #ffb020, #ff4f9a)"
+            >
+              <i class="bi bi-lightbulb"></i>
+            </div>
+            <div class="bd">
+              <h3>ZIEP – Zinc Innovation Excellence Portal</h3>
+              <p>
+                Web-based continuous improvement and innovation portal for Idea
+                Innovation, Kaizen, SGA, FIP, R&amp;R Evaluation, Insurance
+                Portal and Training Portal, with registration, approval,
+                evaluation, history tracking and reporting workflows.
+              </p>
+              <div class="tg">
+                <span>ASP.NET Core MVC</span><span>C#</span
+                ><span>SQL Server</span><span>JavaScript</span
+                ><span>jQuery</span><span>AJAX</span><span>Bootstrap</span
+                ><span>IIS</span>
+              </div>
+              <button class="lk pbtn" type="button">
+                View details <i class="bi bi-arrow-right"></i>
+              </button>
+              <div class="pd" hidden>
+                <p class="role">
+                  <b>My role:</b> Developed and maintained multiple modules, MVC
+                  controllers, models and views, responsive UI, stored
+                  procedures and production/UAT support.
+                </p>
+                <ul class="ex">
+                  <li>
+                    Modules: Idea Innovation, Kaizen, SGA, FIP, R&amp;R
+                    Evaluation, Insurance and Training Portals
+                  </li>
+                  <li>
+                    Responsive UI with HTML, CSS, Bootstrap, JavaScript and
+                    jQuery
+                  </li>
+                  <li>SQL Server stored procedures, queries, joins and CTEs</li>
+                  <li>
+                    Listing pages with search, filters, date ranges and
+                    pagination
+                  </li>
+                  <li>
+                    AJAX loading of master data: Units, SBU, Roles, Employees
+                  </li>
+                  <li>
+                    Fixes for approval workflows, role mapping, duplicate logs
+                    and attachment history
+                  </li>
+                  <li>
+                    Debugging of SQL, C#, JavaScript, JSON, validation and
+                    date-format issues
+                  </li>
+                  <li>
+                    Requirement analysis, testing, bug fixing and deployment
+                    support
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-  <article class="card pj rv" data-c="ent">
-   <div class="im" style="background:linear-gradient(135deg,#ffb020,#ff4f9a)"><i class="bi bi-lightbulb"></i></div>
-   <div class="bd"><h3>ZIEP – Zinc Innovation Excellence Portal</h3>
-    <p>Web-based continuous improvement and innovation portal for Idea Innovation, Kaizen, SGA, FIP, R&amp;R Evaluation, Insurance Portal and Training Portal, with registration, approval, evaluation, history tracking and reporting workflows.</p>
-    <div class="tg"><span>ASP.NET Core MVC</span><span>C#</span><span>SQL Server</span><span>JavaScript</span><span>jQuery</span><span>AJAX</span><span>Bootstrap</span><span>IIS</span></div>
-    <button class="lk pbtn" type="button">View details <i class="bi bi-arrow-right"></i></button>
-    <div class="pd" hidden>
-     <p class="role"><b>My role:</b> Developed and maintained multiple modules, MVC controllers, models and views, responsive UI, stored procedures and production/UAT support.</p>
-     <ul class="ex"><li>Modules: Idea Innovation, Kaizen, SGA, FIP, R&amp;R Evaluation, Insurance and Training Portals</li><li>Responsive UI with HTML, CSS, Bootstrap, JavaScript and jQuery</li><li>SQL Server stored procedures, queries, joins and CTEs</li><li>Listing pages with search, filters, date ranges and pagination</li><li>AJAX loading of master data: Units, SBU, Roles, Employees</li><li>Fixes for approval workflows, role mapping, duplicate logs and attachment history</li><li>Debugging of SQL, C#, JavaScript, JSON, validation and date-format issues</li><li>Requirement analysis, testing, bug fixing and deployment support</li></ul>
-    </div></div></article>
+    <style>
+      .pbtn {
+        background: none;
+        border: 0;
+        cursor: pointer;
+        font-family: inherit;
+        padding: 0;
+      }
+      .pj .im.has {
+        background-size: cover !important;
+        background-position: center;
+      }
+      .pj .im.has i {
+        display: none;
+      }
+      .pj .im {
+        transition: transform 0.5s;
+      }
+      .pj:hover .im {
+        transform: scale(1.04);
+      }
+      .pj {
+        overflow: hidden;
+      }
+      /* make sure the tick list style exists */
+      .ex {
+        list-style: none;
+        margin-top: 14px;
+      }
+      .ex li {
+        position: relative;
+        padding: 6px 0 6px 28px;
+        font-size: 14px;
+        color: var(--mu);
+      }
+      .ex li::before {
+        content: "\2713";
+        position: absolute;
+        left: 0;
+        top: 6px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: var(--g);
+        color: #fff;
+        font-size: 11px;
+        font-weight: 800;
+        display: grid;
+        place-items: center;
+      }
+      /* popup */
+      #pm {
+        position: fixed;
+        inset: 0;
+        z-index: 500;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 16px;
+        background: rgba(6, 10, 30, 0.62);
+        -webkit-backdrop-filter: blur(6px);
+        backdrop-filter: blur(6px);
+      }
+      #pm.open {
+        display: flex;
+      }
+      .pmc {
+        position: relative;
+        width: min(780px, 100%);
+        max-height: calc(100dvh - 32px);
+        overflow: auto;
+        background: var(--s);
+        color: var(--tx);
+        border: 1px solid var(--bd);
+        border-radius: 26px;
+        padding: clamp(20px, 4vw, 34px);
+        box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+        animation: pmin 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+      }
+      @keyframes pmin {
+        from {
+          opacity: 0;
+          transform: translateY(24px) scale(0.97);
+        }
+      }
+      .pmx {
+        position: absolute;
+        top: 14px;
+        right: 14px;
+      }
+      .pmc h3 {
+        font-size: clamp(20px, 3vw, 26px);
+        margin: 0 46px 8px 0;
+        letter-spacing: -0.02em;
+        line-height: 1.2;
+      }
+      .pmc .dsc,
+      .pmc .role {
+        color: var(--mu);
+      }
+      .pmc .role b {
+        color: var(--tx);
+      }
+      .pmc h4 {
+        font-size: 12.5px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--b);
+        margin: 22px 0 4px;
+      }
+      .pmc .tg {
+        display: flex;
+        gap: 6px;
+        flex-wrap: wrap;
+        margin: 14px 0 4px;
+      }
+      .pmc .tg span {
+        font-size: 11.5px;
+        font-weight: 700;
+        padding: 4px 11px;
+        border-radius: 20px;
+        background: color-mix(in srgb, var(--a) 10%, transparent);
+        color: var(--a);
+      }
+      .pmg {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        margin-top: 10px;
+      }
+      .pmg:empty {
+        display: none;
+      }
+      .pmg img {
+        width: 100%;
+        border-radius: 14px;
+        border: 1px solid var(--bd);
+      }
+      @media (max-width: 600px) {
+        .pmg {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
 
- </div></div></section>
+    <div id="pm" role="dialog" aria-modal="true" aria-labelledby="pmt">
+      <div class="pmc">
+        <button class="ib pmx" id="pmx" type="button" aria-label="Close">
+          <i class="bi bi-x-lg"></i>
+        </button>
+        <div id="pmb"></div>
+      </div>
+    </div>
 
+    <script>
+      (function () {
+        var pm = document.getElementById("pm"),
+          pmb = document.getElementById("pmb"),
+          pmx = document.getElementById("pmx"),
+          last = null;
 
-<style>
-.pbtn{background:none;border:0;cursor:pointer;font-family:inherit;padding:0}
-.pj .im.has{background-size:cover!important;background-position:center}
-.pj .im.has i{display:none}
-.pj .im{transition:transform .5s}.pj:hover .im{transform:scale(1.04)}
-.pj{overflow:hidden}
-/* make sure the tick list style exists */
-.ex{list-style:none;margin-top:14px}.ex li{position:relative;padding:6px 0 6px 28px;font-size:14px;color:var(--mu)}
-.ex li::before{content:"\2713";position:absolute;left:0;top:6px;width:20px;height:20px;border-radius:50%;background:var(--g);color:#fff;font-size:11px;font-weight:800;display:grid;place-items:center}
-/* popup */
-#pm{position:fixed;inset:0;z-index:500;display:none;align-items:center;justify-content:center;padding:16px;background:rgba(6,10,30,.62);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
-#pm.open{display:flex}
-.pmc{position:relative;width:min(780px,100%);max-height:calc(100dvh - 32px);overflow:auto;background:var(--s);color:var(--tx);border:1px solid var(--bd);border-radius:26px;padding:clamp(20px,4vw,34px);box-shadow:0 30px 80px rgba(0,0,0,.4);animation:pmin .35s cubic-bezier(.2,.8,.2,1)}
-@keyframes pmin{from{opacity:0;transform:translateY(24px) scale(.97)}}
-.pmx{position:absolute;top:14px;right:14px}
-.pmc h3{font-size:clamp(20px,3vw,26px);margin:0 46px 8px 0;letter-spacing:-.02em;line-height:1.2}
-.pmc .dsc,.pmc .role{color:var(--mu)}.pmc .role b{color:var(--tx)}
-.pmc h4{font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--b);margin:22px 0 4px}
-.pmc .tg{display:flex;gap:6px;flex-wrap:wrap;margin:14px 0 4px}
-.pmc .tg span{font-size:11.5px;font-weight:700;padding:4px 11px;border-radius:20px;background:color-mix(in srgb,var(--a) 10%,transparent);color:var(--a)}
-.pmg{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:10px}
-.pmg:empty{display:none}
-.pmg img{width:100%;border-radius:14px;border:1px solid var(--bd)}
-@media(max-width:600px){.pmg{grid-template-columns:1fr}}
-</style>
+        // use the first image as the card cover, if the file exists
+        document.querySelectorAll("#pg .pj[data-imgs]").forEach(function (c) {
+          var first = c.dataset.imgs.split(",")[0].trim(),
+            im = new Image();
+          im.onload = function () {
+            var box = c.querySelector(".im");
+            box.style.backgroundImage = 'url("' + first + '")';
+            box.classList.add("has");
+          };
+          im.src = first;
+        });
 
-<div id="pm" role="dialog" aria-modal="true" aria-labelledby="pmt">
-  <div class="pmc"><button class="ib pmx" id="pmx" type="button" aria-label="Close"><i class="bi bi-x-lg"></i></button><div id="pmb"></div></div>
-</div>
+        function openProject(card) {
+          last = document.activeElement;
+          var extra = card.querySelector(".pd"),
+            role = extra.querySelector(".role"),
+            list = extra.querySelector(".ex");
+          pmb.innerHTML =
+            '<h3 id="pmt">' +
+            card.querySelector("h3").innerHTML +
+            "</h3>" +
+            '<p class="dsc">' +
+            card.querySelector(".bd > p").innerHTML +
+            "</p>" +
+            '<div class="tg">' +
+            card.querySelector(".tg").innerHTML +
+            "</div>" +
+            (role
+              ? '<h4>My role</h4><p class="role">' +
+                role.innerHTML.replace(/^<b>My role:<\/b>\s*/, "") +
+                "</p>"
+              : "") +
+            (list
+              ? '<h4>Key features</h4><ul class="ex">' +
+                list.innerHTML +
+                "</ul>"
+              : "") +
+            '<div class="pmg" id="pmg"></div>';
+          // screenshots: only the ones that really exist are shown
+          var g = document.getElementById("pmg");
+          (card.dataset.imgs || "").split(",").forEach(function (src) {
+            src = src.trim();
+            if (!src) return;
+            var im = new Image();
+            im.alt = card.querySelector("h3").textContent + " screenshot";
+            im.loading = "lazy";
+            im.onload = function () {
+              g.appendChild(im);
+            };
+            im.src = src;
+          });
+          pm.classList.add("open");
+          document.documentElement.style.overflow = "hidden";
+          pmx.focus();
+        }
+        function closeProject() {
+          pm.classList.remove("open");
+          document.documentElement.style.overflow = "";
+          if (last) last.focus();
+        }
 
-<script>
-(function () {
-  var pm = document.getElementById('pm'), pmb = document.getElementById('pmb'), pmx = document.getElementById('pmx'), last = null;
+        document.querySelectorAll("#pg .pbtn").forEach(function (b) {
+          b.addEventListener("click", function () {
+            openProject(b.closest(".pj"));
+          });
+        });
+        pmx.addEventListener("click", closeProject);
+        pm.addEventListener("click", function (e) {
+          if (e.target === pm) closeProject();
+        });
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape" && pm.classList.contains("open"))
+            closeProject();
+        });
+      })();
+    </script>
 
-  // use the first image as the card cover, if the file exists
-  document.querySelectorAll('#pg .pj[data-imgs]').forEach(function (c) {
-    var first = c.dataset.imgs.split(',')[0].trim(), im = new Image();
-    im.onload = function () { var box = c.querySelector('.im'); box.style.backgroundImage = 'url("' + first + '")'; box.classList.add('has'); };
-    im.src = first;
-  });
+    <section id="services">
+      <div class="w">
+        <span class="tt rv">Services</span>
+        <h2 class="rv">What I can <span class="g">do for you</span></h2>
+        <p class="sub rv">
+          Enterprise web development from requirements to deployment.
+        </p>
+        <div class="g4">
+          <div class="card sv rv">
+            <span class="n">01</span>
+            <div class="ic"><i class="bi bi-code-slash"></i></div>
+            <h3>Web Application Development</h3>
+            <p>ASP.NET, MVC and .NET Core apps.</p>
+            <ul>
+              <li>ASP.NET Web Forms &amp; MVC</li>
+              <li>.NET Core applications</li>
+              <li>Role-based login systems</li>
+            </ul>
+          </div>
+          <div class="card sv rv">
+            <span class="n">02</span>
+            <div class="ic"><i class="bi bi-database"></i></div>
+            <h3>Database Design</h3>
+            <p>SQL Server design and tuning.</p>
+            <ul>
+              <li>Stored procedures &amp; joins</li>
+              <li>Query optimization</li>
+              <li>Relational schema design</li>
+            </ul>
+          </div>
+          <div class="card sv rv">
+            <span class="n">03</span>
+            <div class="ic"><i class="bi bi-braces"></i></div>
+            <h3>API Development</h3>
+            <p>RESTful APIs and integrations.</p>
+            <ul>
+              <li>Web API services</li>
+              <li>Entity Framework</li>
+              <li>API integration</li>
+            </ul>
+          </div>
+          <div class="card sv rv">
+            <span class="n">04</span>
+            <div class="ic"><i class="bi bi-bar-chart-line"></i></div>
+            <h3>Reports &amp; Dashboards</h3>
+            <p>MIS and Jasper reporting.</p>
+            <ul>
+              <li>MIS &amp; analytics reports</li>
+              <li>Jasper Reports (JRXML)</li>
+              <li>Monitoring dashboards</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  function openProject(card) {
-    last = document.activeElement;
-    var extra = card.querySelector('.pd'), role = extra.querySelector('.role'), list = extra.querySelector('.ex');
-    pmb.innerHTML =
-      '<h3 id="pmt">' + card.querySelector('h3').innerHTML + '</h3>' +
-      '<p class="dsc">' + card.querySelector('.bd > p').innerHTML + '</p>' +
-      '<div class="tg">' + card.querySelector('.tg').innerHTML + '</div>' +
-      (role ? '<h4>My role</h4><p class="role">' + role.innerHTML.replace(/^<b>My role:<\/b>\s*/, '') + '</p>' : '') +
-      (list ? '<h4>Key features</h4><ul class="ex">' + list.innerHTML + '</ul>' : '') +
-      '<div class="pmg" id="pmg"></div>';
-    // screenshots: only the ones that really exist are shown
-    var g = document.getElementById('pmg');
-    (card.dataset.imgs || '').split(',').forEach(function (src) {
-      src = src.trim(); if (!src) return;
-      var im = new Image(); im.alt = card.querySelector('h3').textContent + ' screenshot'; im.loading = 'lazy';
-      im.onload = function () { g.appendChild(im); }; im.src = src;
-    });
-    pm.classList.add('open'); document.documentElement.style.overflow = 'hidden'; pmx.focus();
-  }
-  function closeProject() {
-    pm.classList.remove('open'); document.documentElement.style.overflow = '';
-    if (last) last.focus();
-  }
+    <section>
+      <div class="w">
+        <span class="tt rv">Process</span>
+        <h2 class="rv">How I <span class="g">work</span></h2>
+        <p class="sub rv">
+          I take part in every phase of the SDLC, from requirements to
+          deployment.
+        </p>
+        <div class="stp">
+          <div class="card rv">
+            <h3>Requirements</h3>
+            <p>Gather and analyze needs with cross-functional teams.</p>
+          </div>
+          <div class="card rv">
+            <h3>Design</h3>
+            <p>Database and BO–BAL–DAL architecture design.</p>
+          </div>
+          <div class="card rv">
+            <h3>Develop</h3>
+            <p>Clean, scalable and maintainable code.</p>
+          </div>
+          <div class="card rv">
+            <h3>Test</h3>
+            <p>Functional testing, UAT and bug fixing.</p>
+          </div>
+          <div class="card rv">
+            <h3>Deploy</h3>
+            <p>Deployment and troubleshooting on client servers.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  document.querySelectorAll('#pg .pbtn').forEach(function (b) {
-    b.addEventListener('click', function () { openProject(b.closest('.pj')); });
-  });
-  pmx.addEventListener('click', closeProject);
-  pm.addEventListener('click', function (e) { if (e.target === pm) closeProject(); });
-  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && pm.classList.contains('open')) closeProject(); });
-})();
-</script>
+    <section id="journey">
+      <div class="w">
+        <span class="tt rv">Journey</span>
+        <h2 class="rv">Experience &amp; <span class="g">Education</span></h2>
+        <p class="sub rv">
+          My professional experience, education and certification.
+        </p>
+        <div class="tabs" id="jt">
+          <button class="on" data-k="e">Experience</button
+          ><button data-k="d">Education</button
+          ><button data-k="c">Certificates</button>
+        </div>
+        <div class="tl">
+          <div class="tp on" data-k="e">
+            <div class="ti card">
+              <small>June 2025 – Sept 2026</small>
+              <h3>Dot Net Developer</h3>
+              <p class="co">
+                <i class="bi bi-building"></i> Microlink Infrastructure
+                Management Pvt Ltd
+              </p>
+              <ul class="ex">
+                <li>
+                  Developed and maintained enterprise-level web applications
+                  using ASP.NET Web Forms, C# and MS SQL Server.
+                </li>
+                <li>
+                  Participated in all SDLC phases including requirements
+                  gathering, design, development and deployment.
+                </li>
+                <li>
+                  Designed and optimized relational databases, created complex
+                  stored procedures and improved query performance.
+                </li>
+                <li>
+                  Implemented new project modules using BO–BAL–DAL architecture
+                  for scalability and maintainability.
+                </li>
+                <li>
+                  Integrated AJAX and jQuery functionality for dynamic,
+                  responsive user interfaces.
+                </li>
+                <li>
+                  Collaborated with cross-functional teams to analyze
+                  requirements and deliver high-quality solutions.
+                </li>
+                <li>
+                  Assisted in troubleshooting and deployment of applications on
+                  client servers.
+                </li>
+              </ul>
+            </div>
+            <div class="ti card">
+              <small>Nov 2023 – Jan 2025</small>
+              <h3>Dot Net Developer</h3>
+              <p class="co">
+                <i class="bi bi-building"></i> Height8 Technologies Pvt Ltd
+              </p>
+              <ul class="ex">
+                <li>
+                  Developed web applications using ASP.NET Web Forms, C# and MS
+                  SQL Server.
+                </li>
+                <li>
+                  Took part in requirements gathering, analysis and solution
+                  design.
+                </li>
+                <li>
+                  Designed and maintained relational databases, writing complex
+                  SQL queries for data manipulation and retrieval.
+                </li>
+                <li>
+                  Developed Jasper reports (JRXML) and implemented them in the
+                  application.
+                </li>
+              </ul>
+            </div>
+            <div class="ti card">
+              <small>July 2022 – Nov 2023</small>
+              <h3>Dot Net Full Stack Developer</h3>
+              <p class="co">
+                <i class="bi bi-building"></i> YSaasInfotech Pvt Ltd
+              </p>
+              <ul class="ex">
+                <li>
+                  Developed web applications using C#, MVC framework and .NET
+                  Core for seamless user experiences.
+                </li>
+                <li>
+                  Designed RESTful APIs and backend services, managing data with
+                  Entity Framework.
+                </li>
+                <li>
+                  Analyzed and optimized front-end and back-end code to improve
+                  website performance.
+                </li>
+                <li>
+                  Contributed to SQL database design and optimization, improving
+                  data retrieval efficiency.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="tp" data-k="d">
+            <div class="ti card">
+              <small>Appearing</small>
+              <h3>B.Tech in Computer Science</h3>
+              <p class="co">
+                <i class="bi bi-mortarboard"></i> ISBM University
+              </p>
+              <p>2nd Year</p>
+            </div>
+            <div class="ti card">
+              <small>2020</small>
+              <h3>Diploma in Computer Science</h3>
+              <p class="co">
+                <i class="bi bi-mortarboard"></i> Shivaji University
+              </p>
+              <p>First Class with Distinction · 80.88%</p>
+            </div>
+            <div class="ti card">
+              <small>2016</small>
+              <h3>H.S.C.</h3>
+              <p class="co">
+                <i class="bi bi-mortarboard"></i> Krishna Mahavidyalaya, Rethre
+                BK
+              </p>
+              <p>Score: 51.54%</p>
+            </div>
+            <div class="ti card">
+              <small>2014</small>
+              <h3>S.S.C.</h3>
+              <p class="co">
+                <i class="bi bi-mortarboard"></i> Khubi High School, Khubi
+              </p>
+              <p>Score: 77.00%</p>
+            </div>
+          </div>
+          <div class="tp" data-k="c">
+            <div class="ti card">
+              <small>2022</small>
+              <h3>Dot Net Full Stack Development</h3>
+              <p class="co">
+                <i class="bi bi-patch-check"></i> CIIT Training Institute
+                &middot; Pune
+              </p>
+              <div class="tags">
+                <span>C#</span><span>ASP.NET</span><span>MVC</span
+                ><span>.NET Core</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <section id="faq">
+      <div class="w" style="max-width: 860px">
+        <span class="tt rv">FAQ</span>
+        <h2 class="rv">Common <span class="g">questions</span></h2>
+        <br />
+        <details class="rv" open>
+          <summary>What kind of applications do you build?</summary>
+          <p>
+            Enterprise web applications using ASP.NET Web Forms, ASP.NET MVC and
+            .NET Core with MS SQL Server, including portals, MIS systems,
+            dashboards and workflow applications.
+          </p>
+        </details>
+        <details class="rv">
+          <summary>Which architecture do you follow?</summary>
+          <p>
+            I implement modules using the BO–BAL–DAL (Business Object, Business
+            Access Layer, Data Access Layer) pattern for scalable and
+            maintainable code.
+          </p>
+        </details>
+        <details class="rv">
+          <summary>Do you work on databases and reports?</summary>
+          <p>
+            Yes. I design relational databases, write stored procedures and
+            complex queries, optimize performance, and build MIS and Jasper
+            (JRXML) reports.
+          </p>
+        </details>
+        <details class="rv">
+          <summary>Can you handle deployment and support?</summary>
+          <p>
+            Yes. I have assisted with troubleshooting and deployment on client
+            servers, UAT and production support, and bug fixing.
+          </p>
+        </details>
+        <details class="rv">
+          <summary>Are you open to new opportunities?</summary>
+          <p>
+            Yes. Reach me by email, phone or WhatsApp and I will get back to
+            you.
+          </p>
+        </details>
+      </div>
+    </section>
 
-<section id="services"><div class="w"><span class="tt rv">Services</span><h2 class="rv">What I can <span class="g">do for you</span></h2><p class="sub rv">Enterprise web development from requirements to deployment.</p>
- <div class="g4">
-  <div class="card sv rv"><span class="n">01</span><div class="ic"><i class="bi bi-code-slash"></i></div><h3>Web Application Development</h3><p>ASP.NET, MVC and .NET Core apps.</p><ul><li>ASP.NET Web Forms &amp; MVC</li><li>.NET Core applications</li><li>Role-based login systems</li></ul></div>
-  <div class="card sv rv"><span class="n">02</span><div class="ic"><i class="bi bi-database"></i></div><h3>Database Design</h3><p>SQL Server design and tuning.</p><ul><li>Stored procedures &amp; joins</li><li>Query optimization</li><li>Relational schema design</li></ul></div>
-  <div class="card sv rv"><span class="n">03</span><div class="ic"><i class="bi bi-braces"></i></div><h3>API Development</h3><p>RESTful APIs and integrations.</p><ul><li>Web API services</li><li>Entity Framework</li><li>API integration</li></ul></div>
-  <div class="card sv rv"><span class="n">04</span><div class="ic"><i class="bi bi-bar-chart-line"></i></div><h3>Reports &amp; Dashboards</h3><p>MIS and Jasper reporting.</p><ul><li>MIS &amp; analytics reports</li><li>Jasper Reports (JRXML)</li><li>Monitoring dashboards</li></ul></div>
- </div></div></section>
+    <section id="contact">
+      <div class="w">
+        <div class="card cta rv" style="margin-bottom: 20px">
+          <h2>Let's work together</h2>
+          <p>
+            Looking for a .NET Full Stack Developer? Get in touch and I'll get
+            back to you.
+          </p>
+          <a class="btn" href="mailto:nileshmore75999@gmail.com"
+            ><i class="bi bi-send-fill"></i>nileshmore75999@gmail.com</a
+          >
+          <div class="ctab">
+            <a class="btn wab" data-wa
+              ><i class="bi bi-whatsapp"></i>WhatsApp Me</a
+            ><a class="btn" data-call
+              ><i class="bi bi-telephone-fill"></i>Call Now</a
+            >
+          </div>
+        </div>
+        <div class="ct">
+          <div class="card rv">
+            <h3 style="margin-bottom: 14px">Send a message</h3>
+            <form id="cfm">
+              <input
+                id="fn"
+                placeholder="Your name"
+                required
+                autocomplete="name"
+              /><input
+                id="fe"
+                type="email"
+                placeholder="Your email"
+                required
+                autocomplete="email"
+              /><textarea
+                id="fm"
+                rows="5"
+                placeholder="Tell me about the role or project..."
+                required
+              ></textarea
+              ><button class="btn p">
+                <i class="bi bi-send-fill"></i>Send by Email</button
+              ><button type="button" id="wab" class="btn wab">
+                <i class="bi bi-whatsapp"></i>Send on WhatsApp
+              </button>
+            </form>
+          </div>
+          <div class="card rv">
+            <h3 style="margin-bottom: 8px">Find me online</h3>
+            <a class="cl" href="mailto:nileshmore75999@gmail.com"
+              ><div class="ic"><i class="bi bi-envelope-fill"></i></div>
+              <div><b>Email</b><small>nileshmore75999@gmail.com</small></div></a
+            >
+            <a
+              class="cl"
+              href="https://linkedin.com/in/nilesh-more-13021026a"
+              target="_blank"
+              rel="noopener"
+              ><div class="ic"><i class="bi bi-linkedin"></i></div>
+              <div><b>LinkedIn</b><small>Nilesh More</small></div></a
+            >
+            <a class="cl" data-wa
+              ><div class="ic" style="background: #25d366">
+                <i class="bi bi-whatsapp"></i>
+              </div>
+              <div>
+                <b>WhatsApp</b><small class="num">Chat on WhatsApp</small>
+              </div></a
+            >
+            <a class="cl" data-call
+              ><div class="ic"><i class="bi bi-telephone-fill"></i></div>
+              <div>
+                <b>Call</b><small class="num">Talk to me directly</small>
+              </div></a
+            >
+            <a
+              class="btn"
+              style="margin-top: 10px; width: 100%"
+              href="Nilesh_More_Resume.pdf"
+              download
+              ><i class="bi bi-download"></i>Download Resume</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
 
-<section><div class="w"><span class="tt rv">Process</span><h2 class="rv">How I <span class="g">work</span></h2><p class="sub rv">I take part in every phase of the SDLC, from requirements to deployment.</p>
- <div class="stp"><div class="card rv"><h3>Requirements</h3><p>Gather and analyze needs with cross-functional teams.</p></div><div class="card rv"><h3>Design</h3><p>Database and BO–BAL–DAL architecture design.</p></div><div class="card rv"><h3>Develop</h3><p>Clean, scalable and maintainable code.</p></div><div class="card rv"><h3>Test</h3><p>Functional testing, UAT and bug fixing.</p></div><div class="card rv"><h3>Deploy</h3><p>Deployment and troubleshooting on client servers.</p></div></div></div></section>
+    <footer>
+      <div class="w">© 2026 Nilesh More · .NET Full Stack Developer</div>
+    </footer>
 
-<section id="journey"><div class="w"><span class="tt rv">Journey</span><h2 class="rv">Experience &amp; <span class="g">Education</span></h2><p class="sub rv">My professional experience, education and certification.</p>
- <div class="tabs" id="jt"><button class="on" data-k="e">Experience</button><button data-k="d">Education</button><button data-k="c">Certificates</button></div>
- <div class="tl"><div class="tp on" data-k="e"><div class="ti card"><small>June 2025 – Sept 2026</small><h3>Dot Net Developer</h3><p class="co"><i class="bi bi-building"></i> Microlink Infrastructure Management Pvt Ltd</p><ul class="ex"><li>Developed and maintained enterprise-level web applications using ASP.NET Web Forms, C# and MS SQL Server.</li><li>Participated in all SDLC phases including requirements gathering, design, development and deployment.</li><li>Designed and optimized relational databases, created complex stored procedures and improved query performance.</li><li>Implemented new project modules using BO–BAL–DAL architecture for scalability and maintainability.</li><li>Integrated AJAX and jQuery functionality for dynamic, responsive user interfaces.</li><li>Collaborated with cross-functional teams to analyze requirements and deliver high-quality solutions.</li><li>Assisted in troubleshooting and deployment of applications on client servers.</li></ul></div><div class="ti card"><small>Nov 2023 – Jan 2025</small><h3>Dot Net Developer</h3><p class="co"><i class="bi bi-building"></i> Height8 Technologies Pvt Ltd</p><ul class="ex"><li>Developed web applications using ASP.NET Web Forms, C# and MS SQL Server.</li><li>Took part in requirements gathering, analysis and solution design.</li><li>Designed and maintained relational databases, writing complex SQL queries for data manipulation and retrieval.</li><li>Developed Jasper reports (JRXML) and implemented them in the application.</li></ul></div><div class="ti card"><small>July 2022 – Nov 2023</small><h3>Dot Net Full Stack Developer</h3><p class="co"><i class="bi bi-building"></i> YSaasInfotech Pvt Ltd</p><ul class="ex"><li>Developed web applications using C#, MVC framework and .NET Core for seamless user experiences.</li><li>Designed RESTful APIs and backend services, managing data with Entity Framework.</li><li>Analyzed and optimized front-end and back-end code to improve website performance.</li><li>Contributed to SQL database design and optimization, improving data retrieval efficiency.</li></ul></div></div>
- <div class="tp" data-k="d"><div class="ti card"><small>Appearing</small><h3>B.Tech in Computer Science</h3><p class="co"><i class="bi bi-mortarboard"></i> ISBM University</p><p>2nd Year</p></div><div class="ti card"><small>2020</small><h3>Diploma in Computer Science</h3><p class="co"><i class="bi bi-mortarboard"></i> Shivaji University</p><p>First Class with Distinction · 80.88%</p></div><div class="ti card"><small>2016</small><h3>H.S.C.</h3><p class="co"><i class="bi bi-mortarboard"></i> Krishna Mahavidyalaya, Rethre BK</p><p>Score: 51.54%</p></div><div class="ti card"><small>2014</small><h3>S.S.C.</h3><p class="co"><i class="bi bi-mortarboard"></i> Khubi High School, Khubi</p><p>Score: 77.00%</p></div></div>
- <div class="tp" data-k="c"><div class="ti card"><small>2022</small><h3>Dot Net Full Stack Development</h3><p class="co"><i class="bi bi-patch-check"></i> CIIT Training Institute &middot; Pune</p><div class="tags"><span>C#</span><span>ASP.NET</span><span>MVC</span><span>.NET Core</span></div></div>
-</div></div></div></section>
+    <a class="ib top" id="tp" href="#home" aria-label="Back to top"
+      ><i class="bi bi-arrow-up"></i
+    ></a>
+    <button class="bot" id="bot" aria-label="Open assistant">
+      <i class="bi bi-chat-dots-fill"></i>
+    </button>
+    <div class="cw" id="cw" role="dialog" aria-label="Portfolio assistant">
+      <header>Nilesh's Assistant</header>
+      <div class="cm" id="cm">
+        <div class="m">
+          Hi! 👋 Welcome to Nilesh's portfolio. Ask about services, skills,
+          projects or contact.
+        </div>
+      </div>
+      <div class="sg">
+        <button data-q="services">Services</button
+        ><button data-q="skills">Skills</button
+        ><button data-q="projects">Projects</button
+        ><button data-q="contact">Contact</button>
+      </div>
+      <form class="cf" id="cf">
+        <input
+          id="ci"
+          placeholder="Ask me something..."
+          autocomplete="off"
+          maxlength="300"
+          required
+        /><button aria-label="Send"><i class="bi bi-send-fill"></i></button>
+      </form>
+    </div>
 
-<section id="faq"><div class="w" style="max-width:860px"><span class="tt rv">FAQ</span><h2 class="rv">Common <span class="g">questions</span></h2><br>
- <details class="rv" open><summary>What kind of applications do you build?</summary><p>Enterprise web applications using ASP.NET Web Forms, ASP.NET MVC and .NET Core with MS SQL Server, including portals, MIS systems, dashboards and workflow applications.</p></details>
- <details class="rv"><summary>Which architecture do you follow?</summary><p>I implement modules using the BO–BAL–DAL (Business Object, Business Access Layer, Data Access Layer) pattern for scalable and maintainable code.</p></details>
- <details class="rv"><summary>Do you work on databases and reports?</summary><p>Yes. I design relational databases, write stored procedures and complex queries, optimize performance, and build MIS and Jasper (JRXML) reports.</p></details>
- <details class="rv"><summary>Can you handle deployment and support?</summary><p>Yes. I have assisted with troubleshooting and deployment on client servers, UAT and production support, and bug fixing.</p></details>
- <details class="rv"><summary>Are you open to new opportunities?</summary><p>Yes. Reach me by email, phone or WhatsApp and I will get back to you.</p></details></div></section>
-
-<section id="contact"><div class="w"><div class="card cta rv" style="margin-bottom:20px"><h2>Let's work together</h2><p>Looking for a .NET Full Stack Developer? Get in touch and I'll get back to you.</p><a class="btn" href="mailto:nileshmore75999@gmail.com"><i class="bi bi-send-fill"></i>nileshmore75999@gmail.com</a><div class="ctab"><a class="btn wab" data-wa><i class="bi bi-whatsapp"></i>WhatsApp Me</a><a class="btn" data-call><i class="bi bi-telephone-fill"></i>Call Now</a></div></div>
- <div class="ct"><div class="card rv"><h3 style="margin-bottom:14px">Send a message</h3><form id="cfm"><input id="fn" placeholder="Your name" required autocomplete="name"><input id="fe" type="email" placeholder="Your email" required autocomplete="email"><textarea id="fm" rows="5" placeholder="Tell me about the role or project..." required></textarea><button class="btn p"><i class="bi bi-send-fill"></i>Send by Email</button><button type="button" id="wab" class="btn wab"><i class="bi bi-whatsapp"></i>Send on WhatsApp</button></form></div>
-  <div class="card rv"><h3 style="margin-bottom:8px">Find me online</h3>
-   <a class="cl" href="mailto:nileshmore75999@gmail.com"><div class="ic"><i class="bi bi-envelope-fill"></i></div><div><b>Email</b><small>nileshmore75999@gmail.com</small></div></a>
-   <a class="cl" href="https://linkedin.com/in/nilesh-more-13021026a" target="_blank" rel="noopener"><div class="ic"><i class="bi bi-linkedin"></i></div><div><b>LinkedIn</b><small>Nilesh More</small></div></a>
-   <a class="cl" data-wa><div class="ic" style="background:#25D366"><i class="bi bi-whatsapp"></i></div><div><b>WhatsApp</b><small class="num">Chat on WhatsApp</small></div></a>
-   <a class="cl" data-call><div class="ic"><i class="bi bi-telephone-fill"></i></div><div><b>Call</b><small class="num">Talk to me directly</small></div></a>
-   <a class="btn" style="margin-top:10px;width:100%" href="Nilesh_More_Resume.pdf" download><i class="bi bi-download"></i>Download Resume</a></div></div></div></section>
-
-<footer><div class="w">© 2026 Nilesh More · .NET Full Stack Developer</div></footer>
-
-<a class="ib top" id="tp" href="#home" aria-label="Back to top"><i class="bi bi-arrow-up"></i></a>
-<button class="bot" id="bot" aria-label="Open assistant"><i class="bi bi-chat-dots-fill"></i></button>
-<div class="cw" id="cw" role="dialog" aria-label="Portfolio assistant"><header>Nilesh's Assistant</header>
- <div class="cm" id="cm"><div class="m">Hi! 👋 Welcome to Nilesh's portfolio. Ask about services, skills, projects or contact.</div></div>
- <div class="sg"><button data-q="services">Services</button><button data-q="skills">Skills</button><button data-q="projects">Projects</button><button data-q="contact">Contact</button></div>
- <form class="cf" id="cf"><input id="ci" placeholder="Ask me something..." autocomplete="off" maxlength="300" required><button aria-label="Send"><i class="bi bi-send-fill"></i></button></form></div>
-
-<script>
-var $=function(s){return document.querySelector(s)},$$=function(s){return document.querySelectorAll(s)};
-$("#th").onclick=function(){var h=document.documentElement,l=h.dataset.theme==="light";h.dataset.theme=l?"dark":"light";this.innerHTML=l?'<i class="bi bi-sun-fill"></i>':'<i class="bi bi-moon-stars-fill"></i>'};
-$("#mn").onclick=function(){$("#nv").classList.toggle("open")};$$("#nv a").forEach(function(a){a.onclick=function(){$("#nv").classList.remove("open")}});
-var W=[".NET Full Stack Developer","ASP.NET MVC Developer","C# Developer","SQL Server Developer"],wi=0,k=0,del=false,ty=$("#ty");
-(function t(){var w=W[wi];ty.textContent=w.slice(0,k);if(!del&&k++===w.length){del=true;return setTimeout(t,1400)}if(del&&--k<0){del=false;k=0;wi=(wi+1)%W.length}setTimeout(t,del?40:80)})();
-var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;var t=e.target;t.classList.add("in");t.querySelectorAll("[data-w]").forEach(function(b){b.style.width=b.dataset.w+"%"});
- var n=t.querySelector("[data-n]");if(n){var v=+n.dataset.n,c=0,st=Math.max(1,Math.round(v/30)),iv=setInterval(function(){c=Math.min(v,c+st);n.textContent=c+(c===v&&n.dataset.s?n.dataset.s:"");if(c>=v)clearInterval(iv)},40)}io.unobserve(t)})},{threshold:.15});
-$$(".rv").forEach(function(e){io.observe(e)});
-var secs=$$("section[id]"),nl=$$("#nv a");
-addEventListener("scroll",function(){var y=scrollY+130,c="home";secs.forEach(function(s){if(s.offsetTop<=y)c=s.id});nl.forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+c)});$("#tp").classList.toggle("s",scrollY>600)},{passive:true});
-$$("#pt button").forEach(function(b){b.onclick=function(){$$("#pt button").forEach(function(x){x.classList.toggle("on",x===b)});$$("#pg .pj").forEach(function(p){p.classList.toggle("hid",b.dataset.f!=="all"&&p.dataset.c!==b.dataset.f)})}});
-$$("#jt button").forEach(function(b){b.onclick=function(){$$("#jt button").forEach(function(x){x.classList.toggle("on",x===b)});$$(".tp").forEach(function(p){p.classList.toggle("on",p.dataset.k===b.dataset.k)})}});
-$("#cfm").onsubmit=function(e){e.preventDefault();location.href="mailto:nileshmore75999@gmail.com?subject="+encodeURIComponent("Portfolio enquiry from "+$("#fn").value)+"&body="+encodeURIComponent($("#fm").value+"\n\nFrom: "+$("#fn").value+" ("+$("#fe").value+")")};
-var cw=$("#cw"),cm=$("#cm"),ci=$("#ci");
-$("#bot").onclick=function(){cw.classList.toggle("open");ci.focus()};
-document.addEventListener("keydown",function(e){if(e.key==="Escape")cw.classList.remove("open")});
-function add(x,c){var m=document.createElement("div");m.className="m "+c;m.textContent=x;cm.appendChild(m);cm.scrollTop=cm.scrollHeight}
-function reply(q){q=q.toLowerCase();
- if(/\b(hi|hello|hey|namaste)\b/.test(q))return"Hi! 👋 Thanks for visiting my portfolio.";
- if(/service|offer/.test(q))return"Services:\n• Web Application Development (ASP.NET, MVC, .NET Core)\n• Database Design (SQL Server)\n• API Development\n• Reports & Dashboards";
- if(/skill|tech|c#|asp|sql|javascript|jquery|bootstrap|api|entity/.test(q))return"Skills: C#, ASP.NET, ASP.NET MVC, .NET Core, Entity Framework, Web API, HTML5, CSS, Bootstrap, JavaScript, jQuery, MS SQL Server, MySQL, Visual Studio, Postman and Jasper Reports.";
- if(/project|work|portfolio/.test(q))return"See the Projects section: H8SSRMS, Social Media Web Application, HZL Insurance MIS, Medical & Occupational Health System and ZIEP.";
- if(/experience|year|company|job/.test(q))return"4 years of experience: Microlink Infrastructure Management, Height8 Technologies and YSaasInfotech.";
- if(/contact|email|hire|phone/.test(q))return"Email: nileshmore75999@gmail.com, or use the contact form below.";
- return"I can help with Services, Skills, Projects and Contact details.";}
-function send(x){x=x.trim();if(!x)return;add(x,"u");add(reply(x),"");ci.value=""}
-$("#cf").onsubmit=function(e){e.preventDefault();send(ci.value)};
-$$("[data-q]").forEach(function(b){b.onclick=function(){send(b.dataset.q)}});
-</script>
-<!-- ===== BUBBLES + BLACK INTRO =====
+    <script>
+      var $ = function (s) {
+          return document.querySelector(s);
+        },
+        $$ = function (s) {
+          return document.querySelectorAll(s);
+        };
+      $("#th").onclick = function () {
+        var h = document.documentElement,
+          l = h.dataset.theme === "light";
+        h.dataset.theme = l ? "dark" : "light";
+        this.innerHTML = l
+          ? '<i class="bi bi-sun-fill"></i>'
+          : '<i class="bi bi-moon-stars-fill"></i>';
+      };
+      $("#mn").onclick = function () {
+        $("#nv").classList.toggle("open");
+      };
+      $$("#nv a").forEach(function (a) {
+        a.onclick = function () {
+          $("#nv").classList.remove("open");
+        };
+      });
+      var W = [
+          ".NET Full Stack Developer",
+          "ASP.NET MVC Developer",
+          "C# Developer",
+          "SQL Server Developer",
+        ],
+        wi = 0,
+        k = 0,
+        del = false,
+        ty = $("#ty");
+      (function t() {
+        var w = W[wi];
+        ty.textContent = w.slice(0, k);
+        if (!del && k++ === w.length) {
+          del = true;
+          return setTimeout(t, 1400);
+        }
+        if (del && --k < 0) {
+          del = false;
+          k = 0;
+          wi = (wi + 1) % W.length;
+        }
+        setTimeout(t, del ? 40 : 80);
+      })();
+      var io = new IntersectionObserver(
+        function (es) {
+          es.forEach(function (e) {
+            if (!e.isIntersecting) return;
+            var t = e.target;
+            t.classList.add("in");
+            t.querySelectorAll("[data-w]").forEach(function (b) {
+              b.style.width = b.dataset.w + "%";
+            });
+            var n = t.querySelector("[data-n]");
+            if (n) {
+              var v = +n.dataset.n,
+                c = 0,
+                st = Math.max(1, Math.round(v / 30)),
+                iv = setInterval(function () {
+                  c = Math.min(v, c + st);
+                  n.textContent =
+                    c + (c === v && n.dataset.s ? n.dataset.s : "");
+                  if (c >= v) clearInterval(iv);
+                }, 40);
+            }
+            io.unobserve(t);
+          });
+        },
+        { threshold: 0.15 },
+      );
+      $$(".rv").forEach(function (e) {
+        io.observe(e);
+      });
+      var secs = $$("section[id]"),
+        nl = $$("#nv a");
+      addEventListener(
+        "scroll",
+        function () {
+          var y = scrollY + 130,
+            c = "home";
+          secs.forEach(function (s) {
+            if (s.offsetTop <= y) c = s.id;
+          });
+          nl.forEach(function (a) {
+            a.classList.toggle("on", a.getAttribute("href") === "#" + c);
+          });
+          $("#tp").classList.toggle("s", scrollY > 600);
+        },
+        { passive: true },
+      );
+      $$("#pt button").forEach(function (b) {
+        b.onclick = function () {
+          $$("#pt button").forEach(function (x) {
+            x.classList.toggle("on", x === b);
+          });
+          $$("#pg .pj").forEach(function (p) {
+            p.classList.toggle(
+              "hid",
+              b.dataset.f !== "all" && p.dataset.c !== b.dataset.f,
+            );
+          });
+        };
+      });
+      $$("#jt button").forEach(function (b) {
+        b.onclick = function () {
+          $$("#jt button").forEach(function (x) {
+            x.classList.toggle("on", x === b);
+          });
+          $$(".tp").forEach(function (p) {
+            p.classList.toggle("on", p.dataset.k === b.dataset.k);
+          });
+        };
+      });
+      $("#cfm").onsubmit = function (e) {
+        e.preventDefault();
+        location.href =
+          "mailto:nileshmore75999@gmail.com?subject=" +
+          encodeURIComponent("Portfolio enquiry from " + $("#fn").value) +
+          "&body=" +
+          encodeURIComponent(
+            $("#fm").value +
+              "\n\nFrom: " +
+              $("#fn").value +
+              " (" +
+              $("#fe").value +
+              ")",
+          );
+      };
+      var cw = $("#cw"),
+        cm = $("#cm"),
+        ci = $("#ci");
+      $("#bot").onclick = function () {
+        cw.classList.toggle("open");
+        ci.focus();
+      };
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") cw.classList.remove("open");
+      });
+      function add(x, c) {
+        var m = document.createElement("div");
+        m.className = "m " + c;
+        m.textContent = x;
+        cm.appendChild(m);
+        cm.scrollTop = cm.scrollHeight;
+      }
+      function reply(q) {
+        q = q.toLowerCase();
+        if (/\b(hi|hello|hey|namaste)\b/.test(q))
+          return "Hi! 👋 Thanks for visiting my portfolio.";
+        if (/service|offer/.test(q))
+          return "Services:\n• Web Application Development (ASP.NET, MVC, .NET Core)\n• Database Design (SQL Server)\n• API Development\n• Reports & Dashboards";
+        if (
+          /skill|tech|c#|asp|sql|javascript|jquery|bootstrap|api|entity/.test(q)
+        )
+          return "Skills: C#, ASP.NET, ASP.NET MVC, .NET Core, Entity Framework, Web API, HTML5, CSS, Bootstrap, JavaScript, jQuery, MS SQL Server, MySQL, Visual Studio, Postman and Jasper Reports.";
+        if (/project|work|portfolio/.test(q))
+          return "See the Projects section: H8SSRMS, Social Media Web Application, HZL Insurance MIS, Medical & Occupational Health System and ZIEP.";
+        if (/experience|year|company|job/.test(q))
+          return "4 years of experience: Microlink Infrastructure Management, Height8 Technologies and YSaasInfotech.";
+        if (/contact|email|hire|phone/.test(q))
+          return "Email: nileshmore75999@gmail.com, or use the contact form below.";
+        return "I can help with Services, Skills, Projects and Contact details.";
+      }
+      function send(x) {
+        x = x.trim();
+        if (!x) return;
+        add(x, "u");
+        add(reply(x), "");
+        ci.value = "";
+      }
+      $("#cf").onsubmit = function (e) {
+        e.preventDefault();
+        send(ci.value);
+      };
+      $$("[data-q]").forEach(function (b) {
+        b.onclick = function () {
+          send(b.dataset.q);
+        };
+      });
+    </script>
+    <!-- ===== BUBBLES + BLACK INTRO =====
      Paste this whole block just before </body>, after your existing <script>. -->
-<style>
-/* floating bubbles (background) + intro bubbles */
-#bgb{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
-.bb{position:absolute;bottom:-140px;border-radius:50%;
-  background:radial-gradient(circle at 30% 26%,rgba(255,255,255,.85),rgba(255,255,255,.15) 26%,transparent 58%),radial-gradient(circle,var(--c1),transparent 72%);
-  border:1px solid rgba(37,99,235,.28);
-  animation:bbrise var(--d) linear var(--dl) infinite;will-change:transform}
-@keyframes bbrise{
-  0%{transform:translate3d(0,0,0) scale(.8);opacity:0}
-  10%{opacity:.9}
-  50%{transform:translate3d(var(--x),-60vh,0) scale(1)}
-  100%{transform:translate3d(calc(var(--x) * -1),-125vh,0) scale(1.1);opacity:0}}
+    <style>
+      /* floating bubbles (background) + intro bubbles */
+      #bgb {
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+        overflow: hidden;
+      }
+      .bb {
+        position: absolute;
+        bottom: -140px;
+        border-radius: 50%;
+        background:
+          radial-gradient(
+            circle at 30% 26%,
+            rgba(255, 255, 255, 0.85),
+            rgba(255, 255, 255, 0.15) 26%,
+            transparent 58%
+          ),
+          radial-gradient(circle, var(--c1), transparent 72%);
+        border: 1px solid rgba(37, 99, 235, 0.28);
+        animation: bbrise var(--d) linear var(--dl) infinite;
+        will-change: transform;
+      }
+      @keyframes bbrise {
+        0% {
+          transform: translate3d(0, 0, 0) scale(0.8);
+          opacity: 0;
+        }
+        10% {
+          opacity: 0.9;
+        }
+        50% {
+          transform: translate3d(var(--x), -60vh, 0) scale(1);
+        }
+        100% {
+          transform: translate3d(calc(var(--x) * -1), -125vh, 0) scale(1.1);
+          opacity: 0;
+        }
+      }
 
-/* black intro screen */
-#intro{position:fixed;inset:0;z-index:9999;background:#04050d;display:grid;place-items:center;text-align:center;overflow:hidden;--r:0%;
-  -webkit-mask:radial-gradient(circle at 50% 50%,transparent var(--r),#000 calc(var(--r) + 10%));
-  mask:radial-gradient(circle at 50% 50%,transparent var(--r),#000 calc(var(--r) + 10%))}
-#intro .bb{border-color:rgba(255,255,255,.25);box-shadow:0 0 30px var(--c1)}
-#intro .it{position:relative;z-index:2;padding:0 20px}
-#intro h1{margin:0 0 8px;font-size:clamp(40px,9vw,84px);line-height:1.05;letter-spacing:-.04em;
-  background:linear-gradient(120deg,#2563eb,#06b6d4 55%,#22c55e);-webkit-background-clip:text;background-clip:text;color:transparent;
-  opacity:0;animation:iin 1s .3s ease forwards}
-#intro p{color:#a9b8d6;font-weight:600;letter-spacing:.08em;font-size:clamp(12px,2vw,15px);opacity:0;animation:iin 1s .7s ease forwards}
-.lbar{width:min(220px,60vw);height:4px;border-radius:4px;background:#ffffff1f;margin:24px auto 0;overflow:hidden}
-.lbar i{display:block;height:100%;width:0;border-radius:4px;background:linear-gradient(120deg,#2563eb,#06b6d4,#22c55e);animation:ld 2.2s .3s ease forwards}
-@keyframes iin{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
-@keyframes ld{to{width:100%}}
+      /* black intro screen */
+      #intro {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        background: #04050d;
+        display: grid;
+        place-items: center;
+        text-align: center;
+        overflow: hidden;
+        --r: 0%;
+        -webkit-mask: radial-gradient(
+          circle at 50% 50%,
+          transparent var(--r),
+          #000 calc(var(--r) + 10%)
+        );
+        mask: radial-gradient(
+          circle at 50% 50%,
+          transparent var(--r),
+          #000 calc(var(--r) + 10%)
+        );
+      }
+      #intro .bb {
+        border-color: rgba(255, 255, 255, 0.25);
+        box-shadow: 0 0 30px var(--c1);
+      }
+      #intro .it {
+        position: relative;
+        z-index: 2;
+        padding: 0 20px;
+      }
+      #intro h1 {
+        margin: 0 0 8px;
+        font-size: clamp(40px, 9vw, 84px);
+        line-height: 1.05;
+        letter-spacing: -0.04em;
+        background: linear-gradient(120deg, #2563eb, #06b6d4 55%, #22c55e);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        opacity: 0;
+        animation: iin 1s 0.3s ease forwards;
+      }
+      #intro p {
+        color: #a9b8d6;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        font-size: clamp(12px, 2vw, 15px);
+        opacity: 0;
+        animation: iin 1s 0.7s ease forwards;
+      }
+      .lbar {
+        width: min(220px, 60vw);
+        height: 4px;
+        border-radius: 4px;
+        background: #ffffff1f;
+        margin: 24px auto 0;
+        overflow: hidden;
+      }
+      .lbar i {
+        display: block;
+        height: 100%;
+        width: 0;
+        border-radius: 4px;
+        background: linear-gradient(120deg, #2563eb, #06b6d4, #22c55e);
+        animation: ld 2.2s 0.3s ease forwards;
+      }
+      @keyframes iin {
+        from {
+          opacity: 0;
+          transform: translateY(24px);
+        }
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+      @keyframes ld {
+        to {
+          width: 100%;
+        }
+      }
 
-/* hero slides in as the colour reveal opens */
-@keyframes hup{from{opacity:0;transform:translateY(36px)}}
-.rdy .hero>div:first-child{animation:hup .9s .15s both}
-.rdy .hero .ph{animation:hup .9s .35s both}
+      /* hero slides in as the colour reveal opens */
+      @keyframes hup {
+        from {
+          opacity: 0;
+          transform: translateY(36px);
+        }
+      }
+      .rdy .hero > div:first-child {
+        animation: hup 0.9s 0.15s both;
+      }
+      .rdy .hero .ph {
+        animation: hup 0.9s 0.35s both;
+      }
 
-/* click pop bubbles */
-.pop{position:fixed;z-index:9998;pointer-events:none;border-radius:50%;border:1.5px solid rgba(37,99,235,.6);background:rgba(6,182,212,.18);animation:pp 1s ease-out forwards}
-@keyframes pp{to{transform:translate(var(--dx),-90px) scale(1.5);opacity:0}}
+      /* click pop bubbles */
+      .pop {
+        position: fixed;
+        z-index: 9998;
+        pointer-events: none;
+        border-radius: 50%;
+        border: 1.5px solid rgba(37, 99, 235, 0.6);
+        background: rgba(6, 182, 212, 0.18);
+        animation: pp 1s ease-out forwards;
+      }
+      @keyframes pp {
+        to {
+          transform: translate(var(--dx), -90px) scale(1.5);
+          opacity: 0;
+        }
+      }
 
-/* extra look & feel */
-#sp{position:fixed;top:0;left:0;height:4px;width:0;z-index:300;background:linear-gradient(120deg,#2563eb,#06b6d4,#22c55e);border-radius:0 4px 4px 0}
-.g{background-size:200% auto;animation:gshift 6s linear infinite}
-@keyframes gshift{to{background-position:200% center}}
-.btn.p{position:relative;overflow:hidden}
-.btn.p::after{content:"";position:absolute;top:0;left:-70%;width:50%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-20deg);animation:shine 3.5s ease-in-out infinite}
-@keyframes shine{0%,60%{left:-70%}100%{left:130%}}
-.card:hover .ic{transform:rotate(-8deg) scale(1.08)}
-.ic{transition:transform .3s}
-</style>
+      /* extra look & feel */
+      #sp {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 4px;
+        width: 0;
+        z-index: 300;
+        background: linear-gradient(120deg, #2563eb, #06b6d4, #22c55e);
+        border-radius: 0 4px 4px 0;
+      }
+      .g {
+        background-size: 200% auto;
+        animation: gshift 6s linear infinite;
+      }
+      @keyframes gshift {
+        to {
+          background-position: 200% center;
+        }
+      }
+      .btn.p {
+        position: relative;
+        overflow: hidden;
+      }
+      .btn.p::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -70%;
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(
+          100deg,
+          transparent,
+          rgba(255, 255, 255, 0.45),
+          transparent
+        );
+        transform: skewX(-20deg);
+        animation: shine 3.5s ease-in-out infinite;
+      }
+      @keyframes shine {
+        0%,
+        60% {
+          left: -70%;
+        }
+        100% {
+          left: 130%;
+        }
+      }
+      .card:hover .ic {
+        transform: rotate(-8deg) scale(1.08);
+      }
+      .ic {
+        transition: transform 0.3s;
+      }
+    </style>
 
-<div id="intro" aria-hidden="true"><div class="it"><h1>Nilesh More</h1><p>.NET FULL STACK DEVELOPER</p><div class="lbar"><i></i></div></div></div>
+    <div id="intro" aria-hidden="true">
+      <div class="it">
+        <h1>Nilesh More</h1>
+        <p>.NET FULL STACK DEVELOPER</p>
+        <div class="lbar"><i></i></div>
+      </div>
+    </div>
 
-<script>
-(function () {
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var intro = document.getElementById('intro');
-  if (reduce) { intro.remove(); return; }
+    <script>
+      (function () {
+        var reduce = window.matchMedia(
+          "(prefers-reduced-motion: reduce)",
+        ).matches;
+        var intro = document.getElementById("intro");
+        if (reduce) {
+          intro.remove();
+          return;
+        }
 
-  var cols = ['rgba(37,99,235,.5)', 'rgba(6,182,212,.5)', 'rgba(34,197,94,.45)', 'rgba(250,204,21,.4)'];
-  function bubble(parent, inIntro) {
-    var b = document.createElement('span'), s = inIntro ? 10 + Math.random() * 70 : 18 + Math.random() * 90;
-    b.className = 'bb';
-    b.style.cssText = 'width:' + s + 'px;height:' + s + 'px;left:' + (Math.random() * 100) + '%;' +
-      '--x:' + (Math.random() * 80 - 40) + 'px;' +
-      '--d:' + (inIntro ? 4 + Math.random() * 4 : 12 + Math.random() * 14) + 's;' +
-      '--dl:-' + (Math.random() * (inIntro ? 4 : 14)) + 's;' +
-      '--c1:' + cols[Math.floor(Math.random() * cols.length)];
-    parent.appendChild(b);
-  }
+        var cols = [
+          "rgba(37,99,235,.5)",
+          "rgba(6,182,212,.5)",
+          "rgba(34,197,94,.45)",
+          "rgba(250,204,21,.4)",
+        ];
+        function bubble(parent, inIntro) {
+          var b = document.createElement("span"),
+            s = inIntro ? 10 + Math.random() * 70 : 18 + Math.random() * 90;
+          b.className = "bb";
+          b.style.cssText =
+            "width:" +
+            s +
+            "px;height:" +
+            s +
+            "px;left:" +
+            Math.random() * 100 +
+            "%;" +
+            "--x:" +
+            (Math.random() * 80 - 40) +
+            "px;" +
+            "--d:" +
+            (inIntro ? 4 + Math.random() * 4 : 12 + Math.random() * 14) +
+            "s;" +
+            "--dl:-" +
+            Math.random() * (inIntro ? 4 : 14) +
+            "s;" +
+            "--c1:" +
+            cols[Math.floor(Math.random() * cols.length)];
+          parent.appendChild(b);
+        }
 
-  // 1) bubbles in the black intro
-  for (var i = 0; i < 24; i++) bubble(intro, true);
-  document.documentElement.style.overflow = 'hidden';
+        // 1) bubbles in the black intro
+        for (var i = 0; i < 24; i++) bubble(intro, true);
+        document.documentElement.style.overflow = "hidden";
 
-  // 2) black -> colour reveal (circle opens from the centre)
-  function reveal() {
-    document.documentElement.classList.add('rdy');
-    var t0 = performance.now(), dur = 1300;
-    (function step(t) {
-      var p = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - p, 3);
-      intro.style.setProperty('--r', (e * 150) + '%');
-      if (p < 1) requestAnimationFrame(step);
-      else { intro.remove(); document.documentElement.style.overflow = ''; }
-    })(t0);
-  }
-  setTimeout(reveal, 2600);   // <-- how long the black screen stays (milliseconds)
+        // 2) black -> colour reveal (circle opens from the centre)
+        function reveal() {
+          document.documentElement.classList.add("rdy");
+          var t0 = performance.now(),
+            dur = 1300;
+          (function step(t) {
+            var p = Math.min(1, (t - t0) / dur),
+              e = 1 - Math.pow(1 - p, 3);
+            intro.style.setProperty("--r", e * 150 + "%");
+            if (p < 1) requestAnimationFrame(step);
+            else {
+              intro.remove();
+              document.documentElement.style.overflow = "";
+            }
+          })(t0);
+        }
+        setTimeout(reveal, 2600); // <-- how long the black screen stays (milliseconds)
 
-  // 3) floating bubbles behind the page
-  var bg = document.createElement('div');
-  bg.id = 'bgb';
-  document.body.appendChild(bg);
-  for (var j = 0; j < 14; j++) bubble(bg, false);   // <-- number of bubbles
+        // 3) floating bubbles behind the page
+        var bg = document.createElement("div");
+        bg.id = "bgb";
+        document.body.appendChild(bg);
+        for (var j = 0; j < 14; j++) bubble(bg, false); // <-- number of bubbles
 
-  // 4) little bubbles pop where you click
-  document.addEventListener('click', function (e) {
-    for (var k = 0; k < 6; k++) {
-      var p = document.createElement('span'), s = 8 + Math.random() * 14;
-      p.className = 'pop';
-      p.style.cssText = 'width:' + s + 'px;height:' + s + 'px;left:' + (e.clientX - s / 2) + 'px;top:' + (e.clientY - s / 2) + 'px;--dx:' + (Math.random() * 90 - 45) + 'px';
-      p.addEventListener('animationend', function () { this.remove(); });
-      document.body.appendChild(p);
-    }
-  });
-})();
-</script>
+        // 4) little bubbles pop where you click
+        document.addEventListener("click", function (e) {
+          for (var k = 0; k < 6; k++) {
+            var p = document.createElement("span"),
+              s = 8 + Math.random() * 14;
+            p.className = "pop";
+            p.style.cssText =
+              "width:" +
+              s +
+              "px;height:" +
+              s +
+              "px;left:" +
+              (e.clientX - s / 2) +
+              "px;top:" +
+              (e.clientY - s / 2) +
+              "px;--dx:" +
+              (Math.random() * 90 - 45) +
+              "px";
+            p.addEventListener("animationend", function () {
+              this.remove();
+            });
+            document.body.appendChild(p);
+          }
+        });
+      })();
+    </script>
 
-<div id="sp"></div>
-<script>
-addEventListener("scroll",function(){var h=document.documentElement,m=h.scrollHeight-h.clientHeight;document.getElementById("sp").style.width=(m>0?h.scrollTop/m*100:0)+"%"},{passive:true});
-</script>
+    <div id="sp"></div>
+    <script>
+      addEventListener(
+        "scroll",
+        function () {
+          var h = document.documentElement,
+            m = h.scrollHeight - h.clientHeight;
+          document.getElementById("sp").style.width =
+            (m > 0 ? (h.scrollTop / m) * 100 : 0) + "%";
+        },
+        { passive: true },
+      );
+    </script>
 
-<!-- ===== BLACK THEME FIRST + WHATSAPP / CALL ===== -->
-<style>
-body,.card,.nb,.mq,details,input,textarea,.soc a,.ib{transition:background-color .6s ease,color .6s ease,border-color .6s ease,box-shadow .6s ease}
-#th{position:relative}
-#th::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:2px solid var(--b);opacity:0;animation:thint 2.4s ease-out 3.5s 3}
-@keyframes thint{0%{opacity:.9;transform:scale(.9)}100%{opacity:0;transform:scale(1.5)}}
-.btn.wab{background:#25D366;color:#fff;border:0;box-shadow:0 12px 30px rgba(37,211,102,.35)}
-.soc a.wa:hover{background:#25D366;color:#fff}
-.soc a.cal:hover{background:var(--a);color:#fff}
-.ctab{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:12px}
-.ctab .btn:not(.wab){background:#fff;color:#1d4ed8}
-.cta>a.btn{margin:0 6px}
-.fab{position:fixed;left:max(18px,env(safe-area-inset-left));z-index:200;width:58px;height:58px;border-radius:50%;color:#fff;font-size:27px;display:grid;place-items:center;text-decoration:none;transition:transform .25s}
-.fab:hover{transform:scale(1.1)}
-.fab.w{bottom:max(18px,env(safe-area-inset-bottom));background:#25D366;box-shadow:0 10px 30px rgba(37,211,102,.45)}
-.fab.c{bottom:calc(max(18px,env(safe-area-inset-bottom)) + 70px);background:var(--a);box-shadow:0 10px 30px rgba(37,99,235,.45);font-size:24px}
-.fab.w::before{content:"";position:absolute;inset:0;border-radius:50%;background:#25D366;opacity:.5;z-index:-1;animation:wap 2s ease-out infinite}
-@keyframes wap{to{transform:scale(1.7);opacity:0}}
-</style>
-<a class="fab c" data-call aria-label="Call me"><i class="bi bi-telephone-fill"></i></a>
-<a class="fab w" data-wa aria-label="Chat on WhatsApp"><i class="bi bi-whatsapp"></i></a>
-<script>
-(function () {
-  // >>> PUT YOUR PHONE / WHATSAPP NUMBER HERE: country code + number, no "+", no spaces. Example (India): 919876543210
-  var NUMBER = "918698765216";
+    <!-- ===== BLACK THEME FIRST + WHATSAPP / CALL ===== -->
+    <style>
+      body,
+      .card,
+      .nb,
+      .mq,
+      details,
+      input,
+      textarea,
+      .soc a,
+      .ib {
+        transition:
+          background-color 0.6s ease,
+          color 0.6s ease,
+          border-color 0.6s ease,
+          box-shadow 0.6s ease;
+      }
+      #th {
+        position: relative;
+      }
+      #th::after {
+        content: "";
+        position: absolute;
+        inset: -4px;
+        border-radius: 50%;
+        border: 2px solid var(--b);
+        opacity: 0;
+        animation: thint 2.4s ease-out 3.5s 3;
+      }
+      @keyframes thint {
+        0% {
+          opacity: 0.9;
+          transform: scale(0.9);
+        }
+        100% {
+          opacity: 0;
+          transform: scale(1.5);
+        }
+      }
+      .btn.wab {
+        background: #25d366;
+        color: #fff;
+        border: 0;
+        box-shadow: 0 12px 30px rgba(37, 211, 102, 0.35);
+      }
+      .soc a.wa:hover {
+        background: #25d366;
+        color: #fff;
+      }
+      .soc a.cal:hover {
+        background: var(--a);
+        color: #fff;
+      }
+      .ctab {
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 12px;
+      }
+      .ctab .btn:not(.wab) {
+        background: #fff;
+        color: #1d4ed8;
+      }
+      .cta > a.btn {
+        margin: 0 6px;
+      }
+      .fab {
+        position: fixed;
+        left: max(18px, env(safe-area-inset-left));
+        z-index: 200;
+        width: 58px;
+        height: 58px;
+        border-radius: 50%;
+        color: #fff;
+        font-size: 27px;
+        display: grid;
+        place-items: center;
+        text-decoration: none;
+        transition: transform 0.25s;
+      }
+      .fab:hover {
+        transform: scale(1.1);
+      }
+      .fab.w {
+        bottom: max(18px, env(safe-area-inset-bottom));
+        background: #25d366;
+        box-shadow: 0 10px 30px rgba(37, 211, 102, 0.45);
+      }
+      .fab.c {
+        bottom: calc(max(18px, env(safe-area-inset-bottom)) + 70px);
+        background: var(--a);
+        box-shadow: 0 10px 30px rgba(37, 99, 235, 0.45);
+        font-size: 24px;
+      }
+      .fab.w::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        background: #25d366;
+        opacity: 0.5;
+        z-index: -1;
+        animation: wap 2s ease-out infinite;
+      }
+      @keyframes wap {
+        to {
+          transform: scale(1.7);
+          opacity: 0;
+        }
+      }
+    </style>
+    <a class="fab c" data-call aria-label="Call me"
+      ><i class="bi bi-telephone-fill"></i
+    ></a>
+    <a class="fab w" data-wa aria-label="Chat on WhatsApp"
+      ><i class="bi bi-whatsapp"></i
+    ></a>
+    <script>
+      (function () {
+        // >>> PUT YOUR PHONE / WHATSAPP NUMBER HERE: country code + number, no "+", no spaces. Example (India): 919876543210
+        var NUMBER = "918698765216";
 
-  var msg = "Hi Nilesh, I saw your portfolio and I would like to connect with you.";
-  var waLink = function (t) { return "https://wa.me/" + NUMBER + "?text=" + encodeURIComponent(t); };
-  document.querySelectorAll("[data-wa]").forEach(function (a) { a.href = waLink(msg); a.target = "_blank"; a.rel = "noopener"; });
-  document.querySelectorAll("[data-call]").forEach(function (a) { a.href = "tel:+" + NUMBER; });
-  document.querySelectorAll(".cl .num").forEach(function (n) { n.textContent = "+" + NUMBER; });
+        var msg =
+          "Hi Nilesh, I saw your portfolio and I would like to connect with you.";
+        var waLink = function (t) {
+          return "https://wa.me/" + NUMBER + "?text=" + encodeURIComponent(t);
+        };
+        document.querySelectorAll("[data-wa]").forEach(function (a) {
+          a.href = waLink(msg);
+          a.target = "_blank";
+          a.rel = "noopener";
+        });
+        document.querySelectorAll("[data-call]").forEach(function (a) {
+          a.href = "tel:+" + NUMBER;
+        });
+        document.querySelectorAll(".cl .num").forEach(function (n) {
+          n.textContent = "+" + NUMBER;
+        });
 
-  var f = document.getElementById("cfm"), w = document.getElementById("wab");
-  if (f && w) w.addEventListener("click", function () {
-    if (!f.reportValidity()) return;
-    window.open(waLink("Hi Nilesh, I'm " + document.getElementById("fn").value + " (" + document.getElementById("fe").value + ").\n\n" + document.getElementById("fm").value), "_blank", "noopener");
-  });
-})();
-</script>
-</body>
+        var f = document.getElementById("cfm"),
+          w = document.getElementById("wab");
+        if (f && w)
+          w.addEventListener("click", function () {
+            if (!f.reportValidity()) return;
+            window.open(
+              waLink(
+                "Hi Nilesh, I'm " +
+                  document.getElementById("fn").value +
+                  " (" +
+                  document.getElementById("fe").value +
+                  ").\n\n" +
+                  document.getElementById("fm").value,
+              ),
+              "_blank",
+              "noopener",
+            );
+          });
+      })();
+    </script>
+  </body>
 </html>
